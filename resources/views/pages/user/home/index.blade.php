@@ -1,7 +1,7 @@
 @extends('frontend.app')
 <!-- ======= Hero Section ======= -->
 @foreach($slider as $sd)
-<section id="hero" style="background: url({{ Storage::url('public/slider/').$sd->gambar }}) top center;">
+<section id="hero" style="background: url({{ Storage::url('public/slider/').$sd->gambar }}) top center; background-repeat: repeat" >
 </section><!-- End Hero -->
 @endforeach
 
@@ -13,23 +13,22 @@
 
             <div class="row justify-content-end">
                 <div class="col-lg-11">
-                    <div class="row justify-content-between">
-
-                        <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
+                    <div class="row justify-content-md-between">
+                        <div class="col-lg-3 col-md-4 d-md-flex align-items-md-stretch">
                             <div class="count-box py-5">
-                                <img src="{{ asset('templates/assets/img/start.png')}}" alt="">
+                                <img src="{{ asset('templates/assets/img/start.png')}}" class="img-fluid" alt="">
                                 <p>Bersiap mengikuti pertandingan</p>
                             </div>
                         </div>
 
-                        <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
+                        <div class="col-lg-3 col-md-4 d-md-flex align-items-md-stretch">
                             <div class="count-box py-5">
                                 <img src="{{ asset('templates/assets/img/solidarity.png')}}" alt="">
                                 <p>Saling mempererat solidaritas</p>
                             </div>
                         </div>
 
-                        <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
+                        <div class="col-lg-3 col-md-4 d-md-flex align-items-md-stretch">
                             <div class="count-box py-5">
                                 <img src="{{ asset('templates/assets/img/winner.png')}}" alt="">
                                 <p>Memenangkan pertandingan dan meraih prestasi</p>
@@ -110,7 +109,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body text-center">
-                <img src="{{ asset('templates/assets/img/poster.jpeg') }}" alt="">
+                <img src="{{ asset('templates/assets/img/poster.jpeg') }}" class="img-fluid" alt="">
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
