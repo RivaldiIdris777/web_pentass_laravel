@@ -89,7 +89,7 @@
                             @enderror
                         </div>
                         <div class="col-md-12">
-                            <label for="url" class="form-label">Alamat URL (Link Google Drive)</label>
+                            <label for="url" class="form-label">Link Google Drive Materi Lomba</label>
                             <input type="text" name="url" class="form-control @error('url') is-invalid @enderror"
                                 value="{{ old('url') }}"
                                 placeholder="Masukkan Alamat Url Google Drive yang sudah dibuat...">
