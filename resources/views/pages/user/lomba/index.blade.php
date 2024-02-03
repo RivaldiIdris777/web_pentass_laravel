@@ -1,7 +1,6 @@
 @extends('frontend.app')
 <!-- ======= Hero Section ======= -->
-<!-- ======= Breadcrumbs ======= -->
-<section id="hero">
+
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="margin-top:90px;">
         <div class="carousel-inner">
             @foreach($slider as $key => $sd)
@@ -19,7 +18,6 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-</section><!-- End Hero -->
 <main id="main">
 
     <!-- ======= About Section ======= -->

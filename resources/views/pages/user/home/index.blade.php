@@ -1,24 +1,24 @@
 @extends('frontend.app')
 <!-- ======= Hero Section ======= -->
-<section id="hero">
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="margin-top:90px;">
-        <div class="carousel-inner">
-            @foreach($slider as $key => $sd)
-            <div class="carousel-item {{$key == 0 ? 'active' : '' }}">
-                <img src="{{ Storage::url('public/slider/').$sd->gambar }}" class="d-block w-100" alt="...">
-            </div>         
-            @endforeach   
+
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="margin-top:90px;">
+    <div class="carousel-inner">
+        @foreach($slider as $key => $sd)
+        <div class="carousel-item {{$key == 0 ? 'active' : '' }}">
+            <img src="{{ Storage::url('public/slider/').$sd->gambar }}" class="d-block w-100" alt="...">
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
+        @endforeach
     </div>
-</section><!-- End Hero -->
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only"></span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only"></span>
+    </a>
+</div>
+
 
 <main id="main">
 
