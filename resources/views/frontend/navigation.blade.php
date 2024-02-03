@@ -3,7 +3,7 @@
     <div class="container d-flex align-items-center justify-content-between">
 
         <div class="logo">
-            <h1 class="text-light"><a href="index.html">
+            <h1 class="text-light"><a href="{{ route('home.depan') }}">
                 <img src="{{ asset('templates/assets/img/pentaslogo2.png') }}" alt="">
             </a></h1>
             <!-- Uncomment below if you prefer to use an image logo -->
