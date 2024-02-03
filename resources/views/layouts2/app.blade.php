@@ -10,7 +10,7 @@
             </form>
             <!-- Navbar-->
             <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
-                <a href="{{ route('home.depan') }}" class="btn btn-warning" style="margin-right:20px;"><i class="fa fa-globe"></i> Kunjungi Halaman Depan</a>
+                <a href="{{ route('home.depan') }}" class="btn btn-warning btn-sm" style="margin-right:20px;"><i class="fa fa-globe"></i> Kunjungi Halaman Depan</a>
                 <li class="nav-item dropdown ml-10">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:white;"><i class="fas fa-user fa-fw" style="color:white;"></i></a>                    
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">

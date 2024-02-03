@@ -1,9 +1,24 @@
 @extends('frontend.app')
 <!-- ======= Hero Section ======= -->
-@foreach($slider as $sd)
-<section id="hero" style="background: url({{ Storage::url('public/slider/').$sd->gambar }}) top center; background-repeat: repeat" >
+<section id="hero">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="margin-top:90px;">
+        <div class="carousel-inner">
+            @foreach($slider as $key => $sd)
+            <div class="carousel-item {{$key == 0 ? 'active' : '' }}">
+                <img src="{{ Storage::url('public/slider/').$sd->gambar }}" class="d-block w-100" alt="...">
+            </div>         
+            @endforeach   
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
 </section><!-- End Hero -->
-@endforeach
 
 <main id="main">
 
@@ -13,7 +28,7 @@
 
             <div class="row justify-content-end">
                 <div class="col-lg-11">
-                    <div class="row justify-content-md-between">
+                    <div class="row justify-content-md-between p-2">
                         <div class="col-lg-3 col-md-4 d-md-flex align-items-md-stretch">
                             <div class="count-box py-5">
                                 <img src="{{ asset('templates/assets/img/start.png')}}" class="img-fluid" alt="">
@@ -109,7 +124,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body text-center">
-                <img src="{{ asset('templates/assets/img/poster.jpeg') }}" class="img-fluid" alt="">
+                <img src="{{ asset('templates/assets/img/poster.jpg') }}" class="img-fluid" alt="">
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

@@ -63,7 +63,8 @@ class HomeController extends Controller
             'file_ktp_suket.required' => 'Wajib  Diisi',
             'file_ktp_suket.mimes' => 'File harus format jpg,jpeg,png',
             'file_ktp_suket.max' => 'Maksimal ukuran file harus 5MB',
-            'g-recaptcha-response.required' => 'Captcha harus diisi',            
+            'setuju_syarat_ketentuan.required' => 'Syarat dan ketentuan harus diisi',
+            'g-recaptcha-response.required' => 'Captcha harus diisi',                        
 
         ];
 
@@ -75,6 +76,7 @@ class HomeController extends Controller
             'asal_sekolah'   => 'required',
             'file_ktp_suket' => 'required|max:5120',
             'url'   => 'required|url',
+            'setuju_syarat_ketentuan'   => 'required',
             'g-recaptcha-response' => 'required|captcha',
         ], $pesan);        
 
@@ -83,6 +85,12 @@ class HomeController extends Controller
         $file = $request->file('file_ktp_suket');
         $fileName = $request->no_wa.'.'. $file->getClientOriginalExtension();
         $file->storeAs('public/filektpsuket', $fileName);
+
+        if($request->setuju_syarat_ketentuan == ''){
+            $request->setuju_syarat_ketentuan == 'tidak_setuju';
+        }else{
+            $request->setuju_syarat_ketentuan == 'setuju';
+        }
         
         //create post
         $peserta = Peserta::create([            
@@ -94,8 +102,8 @@ class HomeController extends Controller
             'asal_sekolah'  => $request->asal_sekolah,
             'url'           => $request->url,
             'keterangan' => $request->keterangan,
+            'setuju_syarat_ketentuan' => $request->setuju_syarat_ketentuan,
             'file_ktp_suket' => $fileName,
-
         ]);
 
         if($peserta){

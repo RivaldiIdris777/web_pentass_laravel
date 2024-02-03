@@ -22,6 +22,7 @@ class Peserta extends Component
     public $asal_sekolah;
     public $status;
     public $keterangan;    
+    public $setuju_syarat_ketentuan;    
     public $url;
 
     use WithPagination;
@@ -56,6 +57,7 @@ class Peserta extends Component
             'no_wa.required' => 'No Whatsapp Wajib diisi',
             'asal_sekolah' => 'Asal Sekolah Wajib diisi',
             'keterangan' => 'Keterangan Wajib diisi',
+            'setuju_syarat_ketentuan' => 'Syarat dan ketentuan harus diisi',
             'url.required' => 'Alamat URL Wajib diisi',
             'url.url' => 'Wajib halaman masukkan format url'
         ];
@@ -66,6 +68,7 @@ class Peserta extends Component
             'no_wa' => 'required',
             'asal_sekolah' => 'required',
             'keterangan' => 'required',
+            'setuju_syarat_ketentuan'   => 'required',
             'url'       => 'required|url'            
         ], $pesan);
         
@@ -77,6 +80,7 @@ class Peserta extends Component
             'asal_sekolah'  => $this->asal_sekolah,
             'status'        => 'calon_peserta',
             'keterangan'    => $this->keterangan,
+            'setuju_syarat_ketentuan' => $request->setuju_syarat_ketentuan,
             'url'           => $this->url,
         ]);
 
@@ -94,6 +98,7 @@ class Peserta extends Component
         $this->asal_sekolah = $data->asal_sekolah;
         $this->status = $data->status;
         $this->keterangan = $data->keterangan;
+        $this->setuju_syarat_ketentuan = $data->setuju_syarat_ketentuan;
         $this->url = $data->url;
 
         $this->updateData = true;
@@ -107,6 +112,7 @@ class Peserta extends Component
             'no_wa.required' => 'No Whatsapp Wajib diisi',
             'asal_sekolah' => 'Asal Sekolah Wajib diisi',
             'keterangan' => 'Keterangan Wajib diisi',
+            'setuju_syarat_ketentuan' => 'Syarat dan ketentuan harus diisi',
             'url'        => 'URL Wajib diisi'
         ];
 
@@ -116,6 +122,7 @@ class Peserta extends Component
             'no_wa' => 'required',
             'asal_sekolah' => 'required',
             'keterangan' => 'required',
+            'setuju_syarat_ketentuan.required' => 'Syarat dan ketentuan harus diisi',
             'url' => 'required',
         ], $pesan);
         
@@ -128,6 +135,7 @@ class Peserta extends Component
             'asal_sekolah'  => $this->asal_sekolah,
             'status'        => 'calon_peserta',
             'keterangan'    => $this->keterangan,
+            'setuju_syarat_ketentuan'    => $this->setuju_syarat_ketentuan,
             'url'           => $this->url,
         ]);
         
@@ -173,6 +181,7 @@ class Peserta extends Component
         $this->asal_sekolah = '';
         $this->status = '';
         $this->keterangan = '';
+        $this->setuju_syarat_ketentuan = '';
         $this->url = '';
 
         $this->peserta_id = '';

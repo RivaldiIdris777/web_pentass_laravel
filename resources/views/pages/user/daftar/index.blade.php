@@ -4,13 +4,14 @@
 
     <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
-        <div class="breadcrumb-hero" style="background-color:yellow; height:43vh;">
+        <div class="breadcrumb-hero" style="background-color:yellow; height:40vh;">
             <div class="container">
                 <div class="breadcrumb-hero mb-4">
                     <h2 style="color:#800000;">Pendaftaran Lomba</h2>
                     <h5 style="color:#800000;">Terdapat tata cara dalam pendaftaran. Silahkan Klik Tombol Dibawah.</h5>
                     <br>
-                    <a href="{{ route('pendaftaran.panduan') }}" class="btn btn-danger mb-5">Syarat/Ketentuan & Tata Cara Pendaftaran</a>
+                    <a href="{{ route('pendaftaran.panduan') }}" class="btn btn-danger mb-5">Syarat/Ketentuan & Tata
+                        Cara Pendaftaran</a>
                 </div>
             </div>
         </div>
@@ -23,18 +24,19 @@
                     <h4 style="color:#fff;">Pendaftaran Lomba PENTASS Tahun 2024</h4>
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('pendaftaran.store') }}" method="post" enctype="multipart/form-data" class="row g-3">
+                    <form action="{{ route('pendaftaran.store') }}" method="post" enctype="multipart/form-data"
+                        class="row g-3">
                         @csrf
                         <div class="col-12">
                             <label for="lomba" class="form-label">Pilih Lomba</label>
                             <select name="lomba" class="form-control  @error('lomba') is-invalid @enderror">
                                 <option value="">-- Pilih Lomba Yang ingin Diikuti --</option>
                                 @foreach($lomba as $dt)
-                                    @if (Request::input('lomba') == $dt)
-                                        <option value="{{ old('lomba') }}" selected>{{ old('lomba') }}</option>
-                                    @else
-                                        <option value="{{ $dt->nama_lomba }}">{{ $dt->nama_lomba }}</option>
-                                    @endif                                
+                                @if (Request::input('lomba') == $dt)
+                                <option value="{{ old('lomba') }}" selected>{{ old('lomba') }}</option>
+                                @else
+                                <option value="{{ $dt->nama_lomba }}">{{ $dt->nama_lomba }}</option>
+                                @endif
                                 @endforeach
                             </select>
                             @error('lomba')
@@ -102,6 +104,10 @@
                                 (Optional)</label>
                             <textarea name="keterangan" id="keterangan" class="form-control" cols="30"
                                 rows="10">{{ old('keterangan') }}</textarea>
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" name="setuju_syarat_ketentuan" value="setuju" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Kami telah menerima <a class="text-primary" href="{{ route('pendaftaran.panduan') }}"><strong>Syarat & ketentuan yang berlaku</strong></a></label>
                         </div>
                         <div class="text-center">
                             <strong>Konfirm Captcha:</strong><br>

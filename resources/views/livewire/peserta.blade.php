@@ -81,6 +81,15 @@
                                         {{ $message }}
                                     </span>
                                 @enderror
+                            </div>                      
+                            <div class="col-md-12 mb-3">
+                                <label for="setuju_syarat_ketentuan">setuju_syarat_ketentuan</label>
+                                <input type="text" wire:model="setuju_syarat_ketentuan" class="form-control @error('setuju_syarat_ketentuan') is-invalid @enderror" placeholder="Masukkan setuju_syarat_ketentuan....">
+                                @error('setuju_syarat_ketentuan')
+                                    <span class="invalid-feedback">
+                                        {{ $message }}
+                                    </span>
+                                @enderror
                             </div>                            
                             <div class="d-grid gap-2">
                                 @if ($updateData == false)
