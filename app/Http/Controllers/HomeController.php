@@ -80,40 +80,46 @@ class HomeController extends Controller
             'g-recaptcha-response' => 'required|captcha',
         ], $pesan);        
 
-        $no_peserta = time().'PSERTA'.$request->no_wa.rand(4,9999);        
+        try {
+            $no_peserta = time().'PSERTA'.$request->no_wa.rand(4,9999);        
 
-        $file = $request->file('file_ktp_suket');
-        $fileName = $request->no_wa.'.'. $file->getClientOriginalExtension();
-        $file->storeAs('public/filektpsuket', $fileName);
+            $file = $request->file('file_ktp_suket');
+            $fileName = $request->no_wa.'.'. $file->getClientOriginalExtension();
+            $file->storeAs('public/filektpsuket', $fileName);
 
-        if($request->setuju_syarat_ketentuan == ''){
-            $request->setuju_syarat_ketentuan == 'tidak_setuju';
-        }else{
-            $request->setuju_syarat_ketentuan == 'setuju';
-        }
-        
-        //create post
-        $peserta = Peserta::create([            
-            'lomba'         => $request->lomba,
-            'no_peserta'    => $no_peserta,
-            'slug'          => Str::slug($request->nama),
-            'nama'          => $request->nama,
-            'no_wa'         => $request->no_wa,
-            'asal_sekolah'  => $request->asal_sekolah,
-            'url'           => $request->url,
-            'keterangan' => $request->keterangan,
-            'setuju_syarat_ketentuan' => $request->setuju_syarat_ketentuan,
-            'file_ktp_suket' => $fileName,
-        ]);
+            if($request->setuju_syarat_ketentuan == ''){
+                $request->setuju_syarat_ketentuan == 'tidak_setuju';
+            }else{
+                $request->setuju_syarat_ketentuan == 'setuju';
+            }
+            
+            //create post
+            $peserta = Peserta::create([            
+                'lomba'         => $request->lomba,
+                'no_peserta'    => $no_peserta,
+                'slug'          => Str::slug($request->nama),
+                'nama'          => $request->nama,
+                'no_wa'         => $request->no_wa,
+                'asal_sekolah'  => $request->asal_sekolah,
+                'url'           => $request->url,
+                'keterangan' => $request->keterangan,
+                'setuju_syarat_ketentuan' => $request->setuju_syarat_ketentuan,
+                'file_ktp_suket' => $fileName,
+            ]);
 
-        if($peserta){
-            //redirect to index
-            Alert::success('Success', 'Peserta berhasil didaftarkan');        
-            return redirect()->route('pendaftaran.detail', $peserta->id);
-        }else {
+            if($peserta){
+                //redirect to index
+                Alert::success('Success', 'Peserta berhasil didaftarkan');        
+                return redirect()->route('pendaftaran.detail', $peserta->id);
+            }else {
+                return redirect()->back();
+            }
+
+        } catch (Exception $e) {
+            $message = $e->getMessage();
+            Alert::warning('Failed with error', $message);
             return redirect()->back();
-        }
-        
+        }            
     }
 
     public function detailpendaftaran($id){

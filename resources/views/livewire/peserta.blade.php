@@ -13,21 +13,14 @@
                     <form wire:submit.prevent="store">
                         <div class="row">
                             <div class="col-md-12 mb-3">
-                                <label for="nama">Nama Lomba</label>                                
-                                <select wire:model.change="lomba" class="form-control @error('lomba_id') is-invalid @enderror">
-                                    <option value="">--- Pilih Lomba ---</option>
-                                    @foreach($dataLomba as $lomba => $value)
-                                        @if (Request::input('lomba') == $value)
-                                            <option value="{{ old('lomba') }}" selected>{{ old('lomba') }}</option>
-                                        @else
-                                            <option value="{{ $value->id }}">{{ $value->nama_lomba }}</option>
-                                        @endif                                
-                                    @endforeach
-                                    <!-- @foreach ($dataLomba as $lomba => $value)
-                                        <option value="{{ $value->id }}">{{ $value->nama_lomba }}</option>
-                                    @endforeach -->
+                                <label for="nama">Nama Lomba</label>                                                                
+                                <select wire:model="lomba" class="form-control @error('lomba') is-invalid @enderror">                                                                                                                                                                                            
+                                    <option value="{ @json($lomba) }">--Pilih Lomba--</option>
+                                    @foreach($dataLomba as $lomba)                                            
+                                        <option value="{{ $lomba->nama_lomba }}">{{ $lomba->nama_lomba }}</option>
+                                    @endforeach                                    
                                 </select>
-                                @error('lomba_id')
+                                @error('lomba')
                                     <span class="invalid-feedback">
                                         {{ $message }}
                                     </span>
@@ -83,7 +76,7 @@
                                 @enderror
                             </div>                      
                             <div class="col-md-12 mb-3">
-                                <label for="setuju_syarat_ketentuan">setuju_syarat_ketentuan</label>
+                                <label for="setuju_syarat_ketentuan">Setuju Syarat Ketentuan</label>
                                 <input type="text" wire:model="setuju_syarat_ketentuan" class="form-control @error('setuju_syarat_ketentuan') is-invalid @enderror" placeholder="Masukkan setuju_syarat_ketentuan....">
                                 @error('setuju_syarat_ketentuan')
                                     <span class="invalid-feedback">
@@ -114,18 +107,18 @@
         <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo"
             data-bs-parent="#accordionExample">
             <div class="accordion-body">
-                <div class="row">
+                <div class="row float-right">
                     <div class="col-md-6">
                         @if ($peserta_selected_id)
                         <a wire:click="delete_confirmation('')" class="btn btn-danger btn-sm" data-bs-toggle="modal"
                             data-bs-target="#exampleModal">Del {{ count($peserta_selected_id) }} data</a>
                         @endif
+                    </div>                    
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Search...." wire:model.live="katakunci">
                     </div>
                     <div class="col-md-2">
                         <a href="{{ route('peserta.exportexcel') }}" class="btn btn-success">Export Data Ke Excel</a>
-                    </div>
-                    <div class="col-md-4">
-                        <input type="text" class="form-control" placeholder="Search...." wire:model.live="katakunci">
                     </div>
                 </div>
                 <div class="table-responsive">

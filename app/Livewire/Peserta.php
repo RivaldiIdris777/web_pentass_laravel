@@ -45,8 +45,9 @@ class Peserta extends Component
         } else {
             $data = ModelsPeserta::orderBy('nama', 'asc')->paginate(8);
             $lomba = ModelsLomba::orderBy('nama_lomba', 'asc')->get();
+            $pesertaLomba = ModelsPeserta::orderBy('lomba', 'asc')->get();
         }                
-        return view('livewire.peserta', ['dataPeserta' => $data, 'dataLomba' => $lomba]);
+        return view('livewire.peserta', ['dataPeserta' => $data, 'dataLomba' => $lomba, 'pesertaLomba' => $pesertaLomba ]);
     }
 
     public function store() 
