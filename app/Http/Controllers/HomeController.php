@@ -30,6 +30,11 @@ class HomeController extends Controller
         return view('pages.user.lomba.index', compact('lomba','slider'));
     }
 
+    public function showdetailLomba() 
+    {
+        
+    }
+
     public function lombadetail($id) 
     {
         //return response

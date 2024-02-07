@@ -9,6 +9,10 @@
         <div class="sb-nav-link-icon"><i class="fas fa-image"></i></div>
         Slider
     </a>
+    <a class="nav-link" href="{{ route('qrcode.index') }}">
+        <div class="sb-nav-link-icon"><i class="fa-solid fa-qrcode"></i></div>
+        Buat QrCode
+    </a>
     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts"
         aria-expanded="false" aria-controls="collapseLayouts">
         <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>

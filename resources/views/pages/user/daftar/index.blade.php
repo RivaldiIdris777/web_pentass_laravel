@@ -1,24 +1,23 @@
 @extends('frontend.app')
 <!-- ======= Hero Section ======= -->
 <main id="main">
+    
+    <section id="cta" class="cta"  style="background-color:yellow;">
+        <div class="container pt-5" data-aos="fade-in">
 
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
-        <div class="breadcrumb-hero" style="background-color:yellow; height:40vh;">
-            <div class="container">
-                <div class="breadcrumb-hero mb-4">
-                    <h2 style="color:#800000;">Pendaftaran Lomba</h2>
+            <div class="text-center pt-5">                
+            <h2 style="color:#800000;">Pendaftaran Lomba</h2>
                     <h5 style="color:#800000;">Terdapat tata cara dalam pendaftaran. Silahkan Klik Tombol Dibawah.</h5>
                     <br>
                     <a href="{{ route('pendaftaran.panduan') }}" class="btn btn-danger mb-5">Syarat/Ketentuan & Tata
                         Cara Pendaftaran</a>
-                </div>
             </div>
+
         </div>
-    </section><!-- End Breadcrumbs -->
+    </section><!-- End Cta Section -->
 
     <section id="form-registry">
-        <div class="container">
+        <div class="container mt-4">
             <div class="card">
                 <div class="card-header text-center" style="background-color:#800000;">
                     <h4 style="color:#fff;">Pendaftaran Lomba PENTASS Tahun 2024</h4>

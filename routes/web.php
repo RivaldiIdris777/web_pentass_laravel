@@ -49,7 +49,8 @@ Route::middleware('auth','role:admin')->group(function () {
     Route::post('/sliderupdate', [App\Http\Controllers\SliderController::class, 'update'])->name('slider.update');    
     Route::delete('/sliderdelete', [App\Http\Controllers\SliderController::class, 'destroy'])->name('slider.destroy');    
 
-
+    // Qrcode
+    Route::resource('/qrcode', App\Http\Controllers\QrcodeController::class);
 
     // Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     // Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

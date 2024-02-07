@@ -2,21 +2,21 @@
 <!-- ======= Hero Section ======= -->
 <main id="main">
 
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
-        <div class="breadcrumb-hero" style="background-color:yellow; height:25vh;">
-            <div class="container">
-                <div class="breadcrumb-hero mb-4">
-                    <h2 style="color:#800000;">Syarat/Ketentuan</h2>
-                </div>
+    <section id="cta" class="cta" style="background-color:yellow;">
+        <div class="container pt-5" data-aos="fade-in">
+
+            <div class="text-center pt-5">
+                <h2 style="color:#800000;">Syarat/Ketentuan</h2>                
             </div>
+
         </div>
-    </section><!-- End Breadcrumbs -->
+    </section><!-- End Cta Section -->
 
     <section id="form-registry">
 
         <div class="ratio ratio-16x9">
-            <iframe src="https://drive.google.com/file/d/1-oZaTkjfhTPtn4CxgrfVXkVoqWaii23K/preview" width="640" height="480" allow="autoplay"></iframe>
+            <iframe src="https://drive.google.com/file/d/1-oZaTkjfhTPtn4CxgrfVXkVoqWaii23K/preview" width="640"
+                height="480" allow="autoplay"></iframe>
         </div>
 
     </section>
