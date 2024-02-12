@@ -31,9 +31,15 @@ Route::get('users/userlist', [App\Http\Controllers\UserController::class, 'getUs
 Route::get('lomba/lombalist', [App\Http\Controllers\LombaController::class, 'getLomba'])->name('lombalist');
 Route::get('slider/sliderlist', [App\Http\Controllers\SliderController::class, 'getSlider'])->name('sliderlist');
 
-Route::middleware('auth','role:admin')->group(function () {
+Route::middleware('auth')->group(function () {
     // User
     Route::resource('/users', App\Http\Controllers\UserController::class);
+
+    // Role
+    Route::resource('/manage-roles', App\Http\Controllers\RoleController::class);
+
+    // Role
+    Route::resource('/manage-menus', App\Http\Controllers\MenuController::class);
     
     // Peserta -> Livewire
     Route::get('/peserta', [App\Http\Controllers\PesertaController::class, 'index'])->name('peserta');
