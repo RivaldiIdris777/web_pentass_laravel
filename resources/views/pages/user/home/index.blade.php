@@ -97,16 +97,18 @@
             </div>
 
             <div class="row">
-                @foreach($lomba as $dt)
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="icon-box">
-                        <div class="icon">
-                            <img src="{{ Storage::url('public/lomba/').$dt->gambar }}" alt="">
+                @foreach($lomba as $dt)                
+                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#syaratpendaftaran">
+                        <div class="icon-box">
+                            <div class="icon">
+                                <img src="{{ Storage::url('public/lomba/').$dt->gambar }}" alt="">
+                            </div>
+                            <h4 class="title"><a href="">{{ $dt->nama_lomba }}</a></h4>
+                            <p class="description">{{ $dt->keterangan }}</p>
                         </div>
-                        <h4 class="title"><a href="">{{ $dt->nama_lomba }}</a></h4>
-                        <p class="description">{{ $dt->keterangan }}</p>
-                    </div>
-                </div>
+                        </a>
+                    </div>                
                 @endforeach
             </div>
 
@@ -114,6 +116,28 @@
     </section><!-- End Services Section -->
 
 </main><!-- End #main -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="syaratpendaftaran" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Syarat Pendaftaran</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="ratio ratio-16x9">
+                <iframe src="https://drive.google.com/file/d/1CcC0OJSHslMoa_oxU8yYOv5sLe-Sg5VL/preview" width="640" height="480" allow="autoplay"></iframe>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="modal fade hide " tabindex="-1" id="postermodal">
     <div class="modal-dialog modal-xl">
