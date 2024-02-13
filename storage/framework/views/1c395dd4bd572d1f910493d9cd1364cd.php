@@ -96,9 +96,9 @@
             </div>
 
             <div class="row">
-                <?php $__currentLoopData = $lomba; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $dt): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>                
-                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#syaratpendaftaran">
+                <?php $__currentLoopData = $lomba; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $dt): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <a href="#" data-bs-toggle="modal" data-bs-target="#syaratpendaftaran">
                         <div class="icon-box">
                             <div class="icon">
                                 <img src="<?php echo e(Storage::url('public/lomba/').$dt->gambar); ?>" alt="">
@@ -106,13 +106,264 @@
                             <h4 class="title"><a href=""><?php echo e($dt->nama_lomba); ?></a></h4>
                             <p class="description"><?php echo e($dt->keterangan); ?></p>
                         </div>
-                        </a>
-                    </div>                
+                    </a>
+                </div>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </div>
 
         </div>
     </section><!-- End Services Section -->
+
+    <section id="cta" class="cta mb-3">
+        <div class="container" data-aos="fade-in">
+            <div class="text-center">
+                <h3>HADIAH LOMBA - TILAWATIL QUR'AN (Perorangan) !!</h3>
+            </div>
+        </div>
+    </section><!-- End Cta Section -->
+
+    <div class="card-group p-3">
+        <div class="card" style="background-color:#800000;">
+            <div class="card-body text-center text-light" style="background-color:#800000;">
+                <img src="<?php echo e(asset('templates/assets/img/juara1.png')); ?>" alt="" class="img-fluid" style="width:20%;">
+                <h4>Juara 1</h4>
+                <p>Hadiah Rp. 2000.000</p>
+            </div>
+        </div>
+        <div class="card" style="background-color:#800000;">
+            <div class="card-body text-center text-light" style="background-color:#800000;">
+                <img src="<?php echo e(asset('templates/assets/img/juara2.png')); ?>" alt="" class="img-fluid" style="width:20%;">
+                <h4>Juara 2</h4>
+                <p>Hadiah Rp. 1000.000</p>
+            </div>
+        </div>
+        <div class="card" style="background-color:#800000;">
+            <div class="card-body text-center text-light" style="background-color:#800000;">
+                <img src="<?php echo e(asset('templates/assets/img/juara3.png')); ?>" alt="" class="img-fluid" style="width:20%;">
+                <h4>Juara 3</h4>
+                <p>Hadiah Rp. 500.000</p>
+            </div>
+        </div>
+    </div>
+
+    <section id="cta" class="cta mb-3">
+        <div class="container" data-aos="fade-in">
+            <div class="text-center">
+                <h3>HADIAH LOMBA - KARYA TULIS ILMIAH (Perorangan) !!</h3>
+            </div>
+        </div>
+    </section><!-- End Cta Section -->
+
+    <div class="card-group p-3">
+        <div class="card" style="background-color:#800000;">
+            <div class="card-body text-center text-light" style="background-color:#800000;">
+                <img src="<?php echo e(asset('templates/assets/img/juara1.png')); ?>" alt="" class="img-fluid" style="width:20%;">
+                <h4>Juara 1</h4>
+                <p>Hadiah Rp. 2000.000</p>
+            </div>
+        </div>
+        <div class="card" style="background-color:#800000;">
+            <div class="card-body text-center text-light" style="background-color:#800000;">
+                <img src="<?php echo e(asset('templates/assets/img/juara2.png')); ?>" alt="" class="img-fluid" style="width:20%;">
+                <h4>Juara 2</h4>
+                <p>Hadiah Rp. 1000.000</p>
+            </div>
+        </div>
+        <div class="card" style="background-color:#800000;">
+            <div class="card-body text-center text-light" style="background-color:#800000;">
+                <img src="<?php echo e(asset('templates/assets/img/juara3.png')); ?>" alt="" class="img-fluid" style="width:20%;">
+                <h4>Juara 3</h4>
+                <p>Hadiah Rp. 500.000</p>
+            </div>
+        </div>
+    </div>
+
+    <section id="cta" class="cta mb-3">
+        <div class="container" data-aos="fade-in">
+            <div class="text-center">
+                <h3>HADIAH LOMBA - CERPEN (Perorangan) !!</h3>
+            </div>
+        </div>
+    </section><!-- End Cta Section -->
+
+    <div class="card-group p-3">
+        <div class="card" style="background-color:#800000;">
+            <div class="card-body text-center text-light" style="background-color:#800000;">
+                <img src="<?php echo e(asset('templates/assets/img/juara1.png')); ?>" alt="" class="img-fluid" style="width:20%;">
+                <h4>Juara 1</h4>
+                <p>Hadiah Rp. 2000.000</p>
+            </div>
+        </div>
+        <div class="card" style="background-color:#800000;">
+            <div class="card-body text-center text-light" style="background-color:#800000;">
+                <img src="<?php echo e(asset('templates/assets/img/juara2.png')); ?>" alt="" class="img-fluid" style="width:20%;">
+                <h4>Juara 2</h4>
+                <p>Hadiah Rp. 1000.000</p>
+            </div>
+        </div>
+        <div class="card" style="background-color:#800000;">
+            <div class="card-body text-center text-light" style="background-color:#800000;">
+                <img src="<?php echo e(asset('templates/assets/img/juara3.png')); ?>" alt="" class="img-fluid" style="width:20%;">
+                <h4>Juara 3</h4>
+                <p>Hadiah Rp. 500.000</p>
+            </div>
+        </div>
+    </div>
+
+    <section id="cta" class="cta mb-3">
+        <div class="container" data-aos="fade-in">
+            <div class="text-center">
+                <h3>HADIAH LOMBA - BACA PUISI (Perorangan) !!</h3>
+            </div>
+        </div>
+    </section><!-- End Cta Section -->
+
+    <div class="card-group p-3">
+        <div class="card" style="background-color:#800000;">
+            <div class="card-body text-center text-light" style="background-color:#800000;">
+                <img src="<?php echo e(asset('templates/assets/img/juara1.png')); ?>" alt="" class="img-fluid" style="width:20%;">
+                <h4>Juara 1</h4>
+                <p>Hadiah Rp. 2000.000</p>
+            </div>
+        </div>
+        <div class="card" style="background-color:#800000;">
+            <div class="card-body text-center text-light" style="background-color:#800000;">
+                <img src="<?php echo e(asset('templates/assets/img/juara2.png')); ?>" alt="" class="img-fluid" style="width:20%;">
+                <h4>Juara 2</h4>
+                <p>Hadiah Rp. 1000.000</p>
+            </div>
+        </div>
+        <div class="card" style="background-color:#800000;">
+            <div class="card-body text-center text-light" style="background-color:#800000;">
+                <img src="<?php echo e(asset('templates/assets/img/juara3.png')); ?>" alt="" class="img-fluid" style="width:20%;">
+                <h4>Juara 3</h4>
+                <p>Hadiah Rp. 500.000</p>
+            </div>
+        </div>
+    </div>
+
+    <section id="cta" class="cta mb-3">
+        <div class="container" data-aos="fade-in">
+            <div class="text-center">
+                <h3>HADIAH LOMBA - POSTER (Perorangan) !!</h3>
+            </div>
+        </div>
+    </section><!-- End Cta Section -->
+
+    <div class="card-group p-3">
+        <div class="card" style="background-color:#800000;">
+            <div class="card-body text-center text-light" style="background-color:#800000;">
+                <img src="<?php echo e(asset('templates/assets/img/juara1.png')); ?>" alt="" class="img-fluid" style="width:20%;">
+                <h4>Juara 1</h4>
+                <p>Hadiah Rp. 2000.000</p>
+            </div>
+        </div>
+        <div class="card" style="background-color:#800000;">
+            <div class="card-body text-center text-light" style="background-color:#800000;">
+                <img src="<?php echo e(asset('templates/assets/img/juara2.png')); ?>" alt="" class="img-fluid" style="width:20%;">
+                <h4>Juara 2</h4>
+                <p>Hadiah Rp. 1000.000</p>
+            </div>
+        </div>
+        <div class="card" style="background-color:#800000;">
+            <div class="card-body text-center text-light" style="background-color:#800000;">
+                <img src="<?php echo e(asset('templates/assets/img/juara3.png')); ?>" alt="" class="img-fluid" style="width:20%;">
+                <h4>Juara 3</h4>
+                <p>Hadiah Rp. 500.000</p>
+            </div>
+        </div>
+    </div>
+
+    <section id="cta" class="cta mb-3">
+        <div class="container" data-aos="fade-in">
+            <div class="text-center">
+                <h3>HADIAH LOMBA - SHORT MOVIE (Tim) !!</h3>
+            </div>
+        </div>
+    </section><!-- End Cta Section -->
+
+    <div class="card-group p-3">
+        <div class="card" style="background-color:#800000;">
+            <div class="card-body text-center text-light" style="background-color:#800000;">
+                <img src="<?php echo e(asset('templates/assets/img/juara1.png')); ?>" alt="" class="img-fluid" style="width:20%;">
+                <h4>Juara 1</h4>
+                <p>Hadiah Rp. 3000.000</p>
+            </div>
+        </div>
+        <div class="card" style="background-color:#800000;">
+            <div class="card-body text-center text-light" style="background-color:#800000;">
+                <img src="<?php echo e(asset('templates/assets/img/juara2.png')); ?>" alt="" class="img-fluid" style="width:20%;">
+                <h4>Juara 2</h4>
+                <p>Hadiah Rp. 1500.000</p>
+            </div>
+        </div>
+        <div class="card" style="background-color:#800000;">
+            <div class="card-body text-center text-light" style="background-color:#800000;">
+                <img src="<?php echo e(asset('templates/assets/img/juara3.png')); ?>" alt="" class="img-fluid" style="width:20%;">
+                <h4>Juara 3</h4>
+                <p>Hadiah Rp. 750.000</p>
+            </div>
+        </div>
+    </div>
+
+    <section id="cta" class="cta mb-3">
+        <div class="container" data-aos="fade-in">
+            <div class="text-center">
+                <h3>HADIAH LOMBA - PADUAN SUARA (Tim) !!</h3>
+            </div>
+        </div>
+    </section><!-- End Cta Section -->
+
+    <div class="card-group p-3">
+        <div class="card" style="background-color:#800000;">
+            <div class="card-body text-center text-light" style="background-color:#800000;">
+                <img src="<?php echo e(asset('templates/assets/img/juara1.png')); ?>" alt="" class="img-fluid" style="width:20%;">
+                <h4>Juara 1</h4>
+                <p>Hadiah Rp. 3000.000</p>
+            </div>
+        </div>
+        <div class="card" style="background-color:#800000;">
+            <div class="card-body text-center text-light" style="background-color:#800000;">
+                <img src="<?php echo e(asset('templates/assets/img/juara2.png')); ?>" alt="" class="img-fluid" style="width:20%;">
+                <h4>Juara 2</h4>
+                <p>Hadiah Rp. 1500.000</p>
+            </div>
+        </div>
+        <div class="card" style="background-color:#800000;">
+            <div class="card-body text-center text-light" style="background-color:#800000;">
+                <img src="<?php echo e(asset('templates/assets/img/juara3.png')); ?>" alt="" class="img-fluid" style="width:20%;">
+                <h4>Juara 3</h4>
+                <p>Hadiah Rp. 750.000</p>
+            </div>
+        </div>
+    </div>
+
+    <section id="cta" class="cta mb-3">
+        <div class="container" data-aos="fade-in">
+            <div class="text-center">
+                <h3>Beasiswa Kuliah UM Jambi</h3><br>                
+            </div>
+            <div class="row pt-5">
+                <div class="col-md-6">
+                    
+                    <h6 class="text-light">Lomba Perorangan</h6><br>
+                    <p>Juara 1 : Bebas biaya Pendaftaran Bebas uang pembangunan</p>
+                    <p>Juara 2 : Bebas biaya Pendaftaran Bebas uang pembangunan 4 semester</p>
+                    <p>Juara 3 : Bebas biaya Pendaftaran Bebas uang pembangunan 2 semester</p>
+                </div>
+                <div class="col-md-6">
+                    
+                    <h6 class="text-light">Lomba Group</h6><br>
+                    <p>Juara 1 : Bebas biaya Pendaftaran Bebas uang pembangunan</p>
+                    <p>Juara 2 : Bebas biaya Pendaftaran Bebas uang pembangunan 4 semester</p>
+                    <p>Juara 3 : Bebas biaya Pendaftaran Bebas uang pembangunan 2 semester</p>
+                </div>
+                <div class="col-md-12 mt-5">
+                    <h5 class="text-light">Bingkisan: Marchendise Universitas Muhammadiyah Jambi, Sertifikat, Piala</h5>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Cta Section -->
 
 </main><!-- End #main -->
 
@@ -127,7 +378,7 @@
             </div>
             <div class="modal-body">
                 <div class="ratio ratio-16x9">
-                <iframe src="https://drive.google.com/file/d/1CcC0OJSHslMoa_oxU8yYOv5sLe-Sg5VL/preview" width="640" height="480" allow="autoplay"></iframe>
+                <iframe src="https://drive.google.com/file/d/1viP8EQxAKEY76J0FhROPqrLVeZ4rjc5y/preview" width="640" height="480" allow="autoplay"></iframe>
                 </div>
             </div>
             <div class="modal-footer">
@@ -146,7 +397,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body text-center">
-                <img src="<?php echo e(asset('templates/assets/img/poster.jpg')); ?>" class="img-fluid" alt="">
+                <img src="<?php echo e(asset('templates/assets/img/poster.png')); ?>" class="img-fluid" alt="">
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
