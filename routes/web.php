@@ -31,6 +31,9 @@ Route::get('users/userlist', [App\Http\Controllers\UserController::class, 'getUs
 Route::get('lomba/lombalist', [App\Http\Controllers\LombaController::class, 'getLomba'])->name('lombalist');
 Route::get('slider/sliderlist', [App\Http\Controllers\SliderController::class, 'getSlider'])->name('sliderlist');
 
+Route::get('peserta/pesertalist', [App\Http\Controllers\PesertaController::class, 'getPeserta'])->name('pesertalist');
+Route::get('/peserta/export_excel', [App\Http\Controllers\PesertaController::class, 'export_excel'])->name('peserta.exportexcel');
+
 Route::middleware('auth')->group(function () {
     // User
     Route::resource('/users', App\Http\Controllers\UserController::class);
@@ -41,14 +44,15 @@ Route::middleware('auth')->group(function () {
     // Role
     Route::resource('/manage-menus', App\Http\Controllers\MenuController::class);
     
-    // Peserta -> Livewire
-    Route::get('/peserta', [App\Http\Controllers\PesertaController::class, 'index'])->name('peserta');
+    // Peserta 
+    Route::resource('/peserta', App\Http\Controllers\PesertaController::class);    
+    Route::delete('/pesertadelete', [App\Http\Controllers\PesertaController::class, 'destroy'])->name('peserta.destroy');
     Route::get('/peserta/export_excel', [App\Http\Controllers\PesertaController::class, 'export_excel'])->name('peserta.exportexcel');
 
     // Lomba
     Route::resource('/lomba', App\Http\Controllers\LombaController::class);
     Route::post('/lombaupdate', [App\Http\Controllers\LombaController::class, 'update'])->name('lomba.update');    
-    Route::delete('/lombadelete', [App\Http\Controllers\LombaController::class, 'destroy'])->name('lomba.destroy');    
+    Route::delete('/lombadelete', [App\Http\Controllers\LombaController::class, 'destroy'])->name('lomba.destroy');
 
     // Slider
     Route::resource('/slider', App\Http\Controllers\SliderController::class);

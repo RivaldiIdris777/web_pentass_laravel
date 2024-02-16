@@ -159,14 +159,14 @@
             <div class="card-body text-center text-light" style="background-color:#800000;">
                 <img src="<?php echo e(asset('templates/assets/img/juara1.png')); ?>" alt="" class="img-fluid" style="width:20%;">
                 <h4>Juara 1</h4>
-                <p>Hadiah Rp. 2000.000</p>
+                <p>Hadiah Rp. 2.000.000</p>
             </div>
         </div>
         <div class="card" style="background-color:#800000;">
             <div class="card-body text-center text-light" style="background-color:#800000;">
                 <img src="<?php echo e(asset('templates/assets/img/juara2.png')); ?>" alt="" class="img-fluid" style="width:20%;">
                 <h4>Juara 2</h4>
-                <p>Hadiah Rp. 1000.000</p>
+                <p>Hadiah Rp. 1.000.000</p>
             </div>
         </div>
         <div class="card" style="background-color:#800000;">
@@ -191,14 +191,14 @@
             <div class="card-body text-center text-light" style="background-color:#800000;">
                 <img src="<?php echo e(asset('templates/assets/img/juara1.png')); ?>" alt="" class="img-fluid" style="width:20%;">
                 <h4>Juara 1</h4>
-                <p>Hadiah Rp. 2000.000</p>
+                <p>Hadiah Rp. 2.000.000</p>
             </div>
         </div>
         <div class="card" style="background-color:#800000;">
             <div class="card-body text-center text-light" style="background-color:#800000;">
                 <img src="<?php echo e(asset('templates/assets/img/juara2.png')); ?>" alt="" class="img-fluid" style="width:20%;">
                 <h4>Juara 2</h4>
-                <p>Hadiah Rp. 1000.000</p>
+                <p>Hadiah Rp. 1.000.000</p>
             </div>
         </div>
         <div class="card" style="background-color:#800000;">
@@ -223,14 +223,14 @@
             <div class="card-body text-center text-light" style="background-color:#800000;">
                 <img src="<?php echo e(asset('templates/assets/img/juara1.png')); ?>" alt="" class="img-fluid" style="width:20%;">
                 <h4>Juara 1</h4>
-                <p>Hadiah Rp. 2000.000</p>
+                <p>Hadiah Rp. 2.000.000</p>
             </div>
         </div>
         <div class="card" style="background-color:#800000;">
             <div class="card-body text-center text-light" style="background-color:#800000;">
                 <img src="<?php echo e(asset('templates/assets/img/juara2.png')); ?>" alt="" class="img-fluid" style="width:20%;">
                 <h4>Juara 2</h4>
-                <p>Hadiah Rp. 1000.000</p>
+                <p>Hadiah Rp. 1.000.000</p>
             </div>
         </div>
         <div class="card" style="background-color:#800000;">
@@ -255,14 +255,14 @@
             <div class="card-body text-center text-light" style="background-color:#800000;">
                 <img src="<?php echo e(asset('templates/assets/img/juara1.png')); ?>" alt="" class="img-fluid" style="width:20%;">
                 <h4>Juara 1</h4>
-                <p>Hadiah Rp. 2000.000</p>
+                <p>Hadiah Rp. 2.000.000</p>
             </div>
         </div>
         <div class="card" style="background-color:#800000;">
             <div class="card-body text-center text-light" style="background-color:#800000;">
                 <img src="<?php echo e(asset('templates/assets/img/juara2.png')); ?>" alt="" class="img-fluid" style="width:20%;">
                 <h4>Juara 2</h4>
-                <p>Hadiah Rp. 1000.000</p>
+                <p>Hadiah Rp. 1.000.000</p>
             </div>
         </div>
         <div class="card" style="background-color:#800000;">
@@ -287,14 +287,14 @@
             <div class="card-body text-center text-light" style="background-color:#800000;">
                 <img src="<?php echo e(asset('templates/assets/img/juara1.png')); ?>" alt="" class="img-fluid" style="width:20%;">
                 <h4>Juara 1</h4>
-                <p>Hadiah Rp. 3000.000</p>
+                <p>Hadiah Rp. 3.000.000</p>
             </div>
         </div>
         <div class="card" style="background-color:#800000;">
             <div class="card-body text-center text-light" style="background-color:#800000;">
                 <img src="<?php echo e(asset('templates/assets/img/juara2.png')); ?>" alt="" class="img-fluid" style="width:20%;">
                 <h4>Juara 2</h4>
-                <p>Hadiah Rp. 1500.000</p>
+                <p>Hadiah Rp. 1.500.000</p>
             </div>
         </div>
         <div class="card" style="background-color:#800000;">
@@ -319,14 +319,14 @@
             <div class="card-body text-center text-light" style="background-color:#800000;">
                 <img src="<?php echo e(asset('templates/assets/img/juara1.png')); ?>" alt="" class="img-fluid" style="width:20%;">
                 <h4>Juara 1</h4>
-                <p>Hadiah Rp. 3000.000</p>
+                <p>Hadiah Rp. 3.000.000</p>
             </div>
         </div>
         <div class="card" style="background-color:#800000;">
             <div class="card-body text-center text-light" style="background-color:#800000;">
                 <img src="<?php echo e(asset('templates/assets/img/juara2.png')); ?>" alt="" class="img-fluid" style="width:20%;">
                 <h4>Juara 2</h4>
-                <p>Hadiah Rp. 1500.000</p>
+                <p>Hadiah Rp. 1.500.000</p>
             </div>
         </div>
         <div class="card" style="background-color:#800000;">
@@ -378,7 +378,7 @@
             </div>
             <div class="modal-body">
                 <div class="ratio ratio-16x9">
-                <iframe src="https://drive.google.com/file/d/1viP8EQxAKEY76J0FhROPqrLVeZ4rjc5y/preview" width="640" height="480" allow="autoplay"></iframe>
+                <iframe src="https://drive.google.com/file/d/1II9fUde-Mf5J44cpY2ghTxGuhwDXfPfR/preview" width="640" height="480" allow="autoplay"></iframe>
                 </div>
             </div>
             <div class="modal-footer">

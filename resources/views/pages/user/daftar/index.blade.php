@@ -44,17 +44,27 @@
                             </div>
                             @enderror
                         </div>
-                        <div class="col-md-6">
-                            <label for="nama" class="form-label">Nama</label>
-                            <input type="text" name="nama" class="form-control @error('nama') is-invalid @enderror"
-                                value="{{ old('nama') }}" id="nama" placeholder="Masukkan nama lengkap...">
-                            @error('name')
+                        <div class="col-md-4">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="text" name="email" class="form-control @error('email') is-invalid @enderror"
+                                value="{{ old('email') }}" id="email" placeholder="Masukkan email...">
+                            @error('email')
                             <div class="alert alert-danger mt-2">
                                 {{ $message }}
                             </div>
                             @enderror
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4">
+                            <label for="nama" class="form-label">Nama</label>
+                            <input type="text" name="nama" class="form-control @error('nama') is-invalid @enderror"
+                                value="{{ old('nama') }}" id="nama" placeholder="Masukkan nama lengkap...">
+                            @error('nama')
+                            <div class="alert alert-danger mt-2">
+                                {{ $message }}
+                            </div>
+                            @enderror
+                        </div>
+                        <div class="col-md-4">
                             <label for="no_wa" class="form-label">Nomor Telepon / Whatsapp</label>
                             <input type="number" name="no_wa" class="form-control @error('no_wa') is-invalid @enderror"
                                 value="{{ old('no_wa') }}" id="no_wa">

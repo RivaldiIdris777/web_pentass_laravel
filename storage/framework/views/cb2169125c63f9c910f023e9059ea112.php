@@ -246,6 +246,10 @@
 
     $('body').on('click', '#btn-edit-lomba', function () {
 
+        $("#img-edit-view").remove();        
+
+        $("#nama_lomba_gambar").remove();        
+
         let lomba_id = $(this).data('id');
 
         //fetch detail post with ajax
@@ -253,14 +257,14 @@
             url: `/lomba/${lomba_id}`,
             type: "GET",
             cache: false,
-            success: function (response) {
-
+            success: function (response) {                
+                
                 //fill data to form
                 src = $(this).find('gambar').attr('src');
                 $('.image-view').append(`
-            <img src="/storage/lomba/${response.data.gambar}" width="50%" height="80%">
-            <p class="mt-3"><strong>Nama Gambar: ${response.data.gambar}</strong></p>            
-            `);            
+                <img src="/storage/lomba/${response.data.gambar}" class="img-fluid" id="img-edit-view">
+                <p class="mt-3" id="nama_lomba_gambar"><strong>Nama Gambar: ${response.data.gambar}</strong></p>            
+                `);            
                 $('#nama_lomba').val(response.data.nama_lomba);
                 $('#keterangan').val(response.data.keterangan);
                 $('#tanggal_pendaftaran').val(response.data.tanggal_pendaftaran);

@@ -16,5 +16,5 @@ class DashboardController extends Controller
 
         
         return view('pages.admin.dashboard.index', compact('lomba','peserta','slider'));
-    }
+    }    
 }

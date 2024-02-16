@@ -58,9 +58,9 @@ if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>
                         </div>
-                        <div class="col-md-6">
-                            <label for="nama" class="form-label">Nama</label>
-                            <input type="text" name="nama" class="form-control <?php $__errorArgs = ['nama'];
+                        <div class="col-md-4">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="text" name="email" class="form-control <?php $__errorArgs = ['email'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
@@ -68,8 +68,8 @@ $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>"
-                                value="<?php echo e(old('nama')); ?>" id="nama" placeholder="Masukkan nama lengkap...">
-                            <?php $__errorArgs = ['name'];
+                                value="<?php echo e(old('email')); ?>" id="email" placeholder="Masukkan email...">
+                            <?php $__errorArgs = ['email'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
@@ -83,7 +83,32 @@ if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
 unset($__errorArgs, $__bag); ?>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4">
+                            <label for="nama" class="form-label">Nama</label>
+                            <input type="text" name="nama" class="form-control <?php $__errorArgs = ['nama'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>"
+                                value="<?php echo e(old('nama')); ?>" id="nama" placeholder="Masukkan nama lengkap...">
+                            <?php $__errorArgs = ['nama'];
+$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
+if ($__bag->has($__errorArgs[0])) :
+if (isset($message)) { $__messageOriginal = $message; }
+$message = $__bag->first($__errorArgs[0]); ?>
+                            <div class="alert alert-danger mt-2">
+                                <?php echo e($message); ?>
+
+                            </div>
+                            <?php unset($message);
+if (isset($__messageOriginal)) { $message = $__messageOriginal; }
+endif;
+unset($__errorArgs, $__bag); ?>
+                        </div>
+                        <div class="col-md-4">
                             <label for="no_wa" class="form-label">Nomor Telepon / Whatsapp</label>
                             <input type="number" name="no_wa" class="form-control <?php $__errorArgs = ['no_wa'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');

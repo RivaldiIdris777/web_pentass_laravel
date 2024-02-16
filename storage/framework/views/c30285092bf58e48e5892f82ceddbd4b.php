@@ -1,22 +1,22 @@
 <!-- ======= Hero Section ======= -->
 
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="margin-top:90px;">
-        <div class="carousel-inner">
-            <?php $__currentLoopData = $slider; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $sd): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <div class="carousel-item <?php echo e($key == 0 ? 'active' : ''); ?>">
-                <img src="<?php echo e(Storage::url('public/slider/').$sd->gambar); ?>" class="d-block w-100" alt="...">
-            </div>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="margin-top:90px;">
+    <div class="carousel-inner">
+        <?php $__currentLoopData = $slider; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key => $sd): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+        <div class="carousel-item <?php echo e($key == 0 ? 'active' : ''); ?>">
+            <img src="<?php echo e(Storage::url('public/slider/').$sd->gambar); ?>" class="d-block w-100" alt="...">
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
 <main id="main">
 
     <!-- ======= About Section ======= -->
@@ -30,7 +30,7 @@
                             <div class="count-box pb-5 pt-3">
                                 <h2 class="text-light">Daftar Lomba</h2>
                             </div>
-                        </div>                    
+                        </div>
                     </div>
                 </div>
             </div>
@@ -68,6 +68,32 @@
 
         </div>
     </section><!-- End Services Section -->
+
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+        <div class="container" data-aos="fade-in">
+
+            <div class="text-center">
+                <h3>Tutorial Pendaftaran Pentass</h3>
+            </div>
+
+        </div>
+    </section><!-- End Cta Section -->
+
+    <section id="features" class="features mt-5">
+        <div class="container">
+
+            <div class="section-title" data-aos="fade-up">
+                <iframe style="width:100%; height:80%;" src="https://www.youtube.com/embed/VYl9V5SO9pg?si=qqhXUtLAFq0CTdLQ"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+
+        </div>
+    </section><!-- End Features Section -->
+
+
 
     <!-- ======= Features Section ======= -->
     <section id="features" class="features">

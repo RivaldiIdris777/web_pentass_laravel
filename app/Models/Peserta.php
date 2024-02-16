@@ -13,7 +13,7 @@ class Peserta extends Model
 
     protected $primaryKey = 'id';
 
-    protected $fillable = ['file_ktp_suket','lomba_id','nama','no_peserta','slug','no_wa','asal_sekolah','status','url','keterangan','setuju_syarat_ketentuan','lomba'];
+    protected $fillable = ['file_ktp_suket','lomba_id','nama','no_peserta','slug','no_wa','asal_sekolah','status','url','keterangan','setuju_syarat_ketentuan','lomba','email'];
 
     public function lomba()
     {

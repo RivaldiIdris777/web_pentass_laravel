@@ -32,6 +32,7 @@ class PesertaExport implements
     {
         return [
             $peserta->id,
+            $peserta->email,
             $peserta->nama,
             $peserta->lomba,
             $peserta->no_peserta,
@@ -52,6 +53,7 @@ class PesertaExport implements
     {
         return [
             'No',
+            'email',
             'nama',
             'lomba',
             'no_peserta',

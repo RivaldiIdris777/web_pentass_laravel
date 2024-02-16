@@ -60,6 +60,8 @@ class HomeController extends Controller
     {
         $pesan = [
             'lomba.required' => 'Lomba Wajib diisi',
+            'email.required' => 'Email Wajib diisi',
+            'email.email'  => 'Email harus valid',
             'nama.required' => 'Nama Wajib diisi',
             'no_wa.required' => 'No Whatsapp Wajib diisi',
             'asal_sekolah' => 'Asal Sekolah Wajib diisi',            
@@ -76,6 +78,7 @@ class HomeController extends Controller
         //validate form
         $this->validate($request, [
             'lomba'     => 'required',
+            'email'     => 'required|email',
             'nama'     => 'required',
             'no_wa'   => 'required',
             'asal_sekolah'   => 'required',
@@ -103,6 +106,7 @@ class HomeController extends Controller
                 'lomba'         => $request->lomba,
                 'no_peserta'    => $no_peserta,
                 'slug'          => Str::slug($request->nama),
+                'email'          => $request->email,
                 'nama'          => $request->nama,
                 'no_wa'         => $request->no_wa,
                 'asal_sekolah'  => $request->asal_sekolah,
