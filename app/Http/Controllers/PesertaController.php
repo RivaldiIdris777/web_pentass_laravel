@@ -102,7 +102,7 @@ class PesertaController extends Controller
             'nama'     => 'required',
             'no_wa'   => 'required',
             'asal_sekolah'   => 'required',
-            'file_ktp_suket' => 'required|max:5120',
+            'file_ktp_suket' => 'required|max:5120|mimes:png,jpg,jpeg',
             'url'   => 'required|url',
             'setuju_syarat_ketentuan'   => 'required',            
         ], $pesan);        
