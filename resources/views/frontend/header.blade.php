@@ -7,7 +7,7 @@
 
     <title>Pentass | Universitas Muhammadiyah Jambi</title>
     <meta content="" name="description">
-    <meta content="" name="keywords">    
+    <meta content="" name="keywords">
 
     <link href="{{ asset('templates/assets/img/favicon.ico')}}" rel="icon">
     <link href="{{ asset('templates/assets/img/logo_um.png')}}" rel="apple-touch-icon">
@@ -24,7 +24,8 @@
     <link href="{{ asset('frontend/assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
     <link href="{{ asset('frontend/assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
     <link href="{{ asset('frontend/assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <!-- Template Main CSS File -->
     <link href="{{ asset('frontend/assets/css/style.css') }}" rel="stylesheet">
+    @stack('styles')
 </head>

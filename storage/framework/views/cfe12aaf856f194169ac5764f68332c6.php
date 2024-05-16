@@ -13,7 +13,7 @@
                     <h4>Halaman Lainnya</h4>
                     <ul>
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">Lomba</a></li>                        
+                        <li><a href="#">Lomba</a></li>
                     </ul>
                 </div>
 
@@ -21,19 +21,19 @@
                     <h4>Hubungi Kami</h4>
                     <p>
                         Jl. Kapten Pattimura, Simpang IV Sipin, Kec. Telanaipura, Kota Jambi, Jambi 36124 Indonesia <br>
-                        <strong>No/WA: +62 822-8612-7654</strong><br>
+                        <strong>No/WA: +62 821-8454-9049</strong><br>
                         <strong>Web:umjambi.ac.id</strong><br>
                     </p>
 
                     <div class="social-links">
                         <a href="https://umjambi.ac.id/" class="website"><i class="bi bi-globe"></i></a>
                         <a href="https://web.facebook.com/pages/Universitas-Muhammadiyah-Jambi/112599823474380" class="facebook"><i class="bi bi-facebook"></i></a>
-                        <a href="https://www.instagram.com/umjambi/" class="instagram"><i class="bi bi-instagram"></i></a>                        
+                        <a href="https://www.instagram.com/umjambi/" class="instagram"><i class="bi bi-instagram"></i></a>
                     </div>
 
                 </div>
 
-                <div class="col-lg-3 col-md-6 footer-newsletter">                    
+                <div class="col-lg-3 col-md-6 footer-newsletter">
                 </div>
 
             </div>
@@ -43,7 +43,7 @@
     <div class="container">
         <div class="copyright">
             &copy; Copyright <strong><span>By</span></strong>. Universitas Muhammadiyah Jambi
-        </div>        
+        </div>
     </div>
 </footer><!-- End Footer -->
 

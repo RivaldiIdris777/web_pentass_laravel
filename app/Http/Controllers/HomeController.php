@@ -30,12 +30,12 @@ class HomeController extends Controller
         return view('pages.user.lomba.index', compact('lomba','slider'));
     }
 
-    public function showdetailLomba() 
+    public function showdetailLomba()
     {
-        
+
     }
 
-    public function lombadetail($id) 
+    public function lombadetail($id)
     {
         //return response
         $lomba = Lomba::find($id);
@@ -46,14 +46,24 @@ class HomeController extends Controller
           'tanggal_perlombaan' => tanggal_indonesia($lomba->tanggal_perlombaan),
           'pic' => $lomba->pic
         ];
-    
+
         return response()->json($data);
+    }
+
+    public function opsipendaftaran()
+    {
+        return view('pages.user.daftar.opsidaftar');
     }
 
     public function pendaftaranlomba()
     {
         $lomba = Lomba::orderBy('id','asc')->get();
         return view('pages.user.daftar.index', compact('lomba'));
+    }
+
+    public function daftarwhatsapp()
+    {
+        return view('pages.user.daftar.daftarwhatsapp');
     }
 
     public function storedaftarpeserta(Request $request)
@@ -64,14 +74,14 @@ class HomeController extends Controller
             'email.email'  => 'Email harus valid',
             'nama.required' => 'Nama Wajib diisi',
             'no_wa.required' => 'No Whatsapp Wajib diisi',
-            'asal_sekolah' => 'Asal Sekolah Wajib diisi',            
+            'asal_sekolah' => 'Asal Sekolah Wajib diisi',
             'url.required' => 'Alamat URL Wajib diisi',
             'url.url' => 'Wajib halaman masukkan format url',
             'file_ktp_suket.required' => 'Wajib  Diisi',
             'file_ktp_suket.mimes' => 'File harus format jpg,jpeg,png',
             'file_ktp_suket.max' => 'Maksimal ukuran file harus 5MB',
             'setuju_syarat_ketentuan.required' => 'Syarat dan ketentuan harus diisi',
-            'g-recaptcha-response.required' => 'Captcha harus diisi',                        
+            'g-recaptcha-response.required' => 'Captcha harus diisi',
 
         ];
 
@@ -82,14 +92,14 @@ class HomeController extends Controller
             'nama'     => 'required',
             'no_wa'   => 'required',
             'asal_sekolah'   => 'required',
-            'file_ktp_suket' => 'required|max:5120',
+            'file_ktp_suket' => 'required|max:5120|mimes:jpeg,jpg,png',
             'url'   => 'required|url',
             'setuju_syarat_ketentuan'   => 'required',
             'g-recaptcha-response' => 'required|captcha',
-        ], $pesan);        
+        ], $pesan);
 
         try {
-            $no_peserta = time().'PSERTA'.$request->no_wa.rand(4,9999);        
+            $no_peserta = time().'PSERTA'.$request->no_wa.rand(4,9999);
 
             $file = $request->file('file_ktp_suket');
             $fileName = $request->no_wa.'.'. $file->getClientOriginalExtension();
@@ -100,9 +110,9 @@ class HomeController extends Controller
             }else{
                 $request->setuju_syarat_ketentuan == 'setuju';
             }
-            
+
             //create post
-            $peserta = Peserta::create([            
+            $peserta = Peserta::create([
                 'lomba'         => $request->lomba,
                 'no_peserta'    => $no_peserta,
                 'slug'          => Str::slug($request->nama),
@@ -118,9 +128,11 @@ class HomeController extends Controller
 
             if($peserta){
                 //redirect to index
-                Alert::success('Success', 'Peserta berhasil didaftarkan');        
+                Alert::success('Success', 'Peserta berhasil didaftarkan');
                 return redirect()->route('pendaftaran.detail', $peserta->id);
             }else {
+                $message = $e->getMessage();
+                Alert::warning('Failed with error', $message);
                 return redirect()->back();
             }
 
@@ -128,7 +140,7 @@ class HomeController extends Controller
             $message = $e->getMessage();
             Alert::warning('Failed with error', $message);
             return redirect()->back();
-        }            
+        }
     }
 
     public function detailpendaftaran($id){
@@ -149,17 +161,17 @@ class HomeController extends Controller
     }
 
     public function caripendaftar(Request $request){
-        $pesan = [            
-            'no_wa.required' => 'No Whatsapp Wajib diisi',            
-            'g-recaptcha-response.required' => 'Captcha harus diisi',            
+        $pesan = [
+            'no_wa.required' => 'No Whatsapp Wajib diisi',
+            'g-recaptcha-response.required' => 'Captcha harus diisi',
 
         ];
 
         //validate form
-        $this->validate($request, [            
-            'no_wa'   => 'required',            
+        $this->validate($request, [
+            'no_wa'   => 'required',
             'g-recaptcha-response' => 'required|captcha',
-        ], $pesan);        
+        ], $pesan);
 
         $cari = Peserta::where('no_wa', 'like', '%'.$request->no_wa.'%')->get();
 

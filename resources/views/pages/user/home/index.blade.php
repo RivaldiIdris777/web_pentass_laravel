@@ -82,7 +82,7 @@
                     berkarakter.
                     Terima kasih atas perhatian dan dukungan semua pihak. Mari bergandengan tangan mewujudkan pendidikan
                     yang berkualitas dan menginspirasi..</p>
-                <a class="cta-btn" href="{{ route('lomba.pendaftaran') }}">DAFTAR DISINI</a>
+                <a class="cta-btn" href="{{ route('lomba.opsipendaftaran') }}">DAFTAR DISINI</a>
             </div>
 
         </div>
@@ -342,18 +342,18 @@
     <section id="cta" class="cta mb-3">
         <div class="container" data-aos="fade-in">
             <div class="text-center">
-                <h3>Beasiswa Kuliah UM Jambi</h3><br>                
+                <h3>Beasiswa Kuliah UM Jambi</h3><br>
             </div>
             <div class="row pt-5">
                 <div class="col-md-6">
-                    
+
                     <h6 class="text-light">Lomba Perorangan</h6><br>
                     <p>Juara 1 : Bebas biaya Pendaftaran Bebas uang pembangunan</p>
                     <p>Juara 2 : Bebas biaya Pendaftaran Bebas uang pembangunan 4 semester</p>
                     <p>Juara 3 : Bebas biaya Pendaftaran Bebas uang pembangunan 2 semester</p>
                 </div>
                 <div class="col-md-6">
-                    
+
                     <h6 class="text-light">Lomba Group</h6><br>
                     <p>Juara 1 : Bebas biaya Pendaftaran Bebas uang pembangunan</p>
                     <p>Juara 2 : Bebas biaya Pendaftaran Bebas uang pembangunan 4 semester</p>
@@ -398,11 +398,11 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body text-center">
-                <img src="{{ asset('templates/assets/img/poster.png') }}" class="img-fluid" alt="">
+                <img src="{{ asset('templates/assets/img/poster.jpeg') }}" class="img-fluid" alt="">
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <a href="{{ route('lomba.pendaftaran') }}" class="btn btn-primary">Daftar Sekarang</a>
+                <a href="{{ route('lomba.opsipendaftaran') }}" class="btn btn-primary">Daftar Sekarang</a>
             </div>
         </div>
     </div>

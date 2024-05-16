@@ -46,7 +46,7 @@
             <div class="row ">
 
                 @foreach($lomba as $dt)
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-md-4 mb-4 d-flex" data-aos="fade-up" data-aos-delay="100">
                     <div class="card" style="background-color:#800000">
                         <div class="card-body text-center">
                             <img src="{{ Storage::url('public/lomba/').$dt->gambar }}" alt="" style="width:20%;">
@@ -57,7 +57,7 @@
                                 <a href="javascript:void(0)" data-toggle="modal" id="btn-detail"
                                     data-url="{{ route('lomba.detailomba', $dt->id) }}"
                                     class="btn btn-primary btn-sm">Informasi Lomba</a>
-                                <a href="{{ route('lomba.pendaftaran') }}" class="btn btn-success btn-sm">Daftar
+                                <a href="{{ route('lomba.opsipendaftaran') }}" class="btn btn-success btn-sm">Daftar
                                     Disini</a>
                             </div>
                         </div>

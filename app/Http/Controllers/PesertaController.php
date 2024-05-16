@@ -44,7 +44,7 @@ class PesertaController extends Controller
 
         $module_title = $this->module_title;
 
-        return view('pages.admin.peserta.index', compact('module_name','module_title'));   
+        return view('pages.admin.peserta.index', compact('module_name','module_title'));
     }
 
     public function getPeserta(Request $request)
@@ -52,11 +52,11 @@ class PesertaController extends Controller
         if ($request->ajax()) {
             $data = Peserta::latest()->get();
             return Datatables::of($data)
-                ->addIndexColumn(['width' => '50px'])                
+                ->addIndexColumn(['width' => '50px'])
                 ->addColumn('action', function($row){
                     $actionBtn = '<a href="'. route('peserta.edit', $row->id).'" id="btn-edit-peserta" data-id="'.$row->id.'" class="edit btn btn-warning btn-sm"><i class="fa fa-pencil"></i></a> <a href="javascript:void(0)" data-id="'.$row->id.'" id="deletePeserta" class="delete btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>';
                     return $actionBtn;
-                })                
+                })
                 ->rawColumns(['action'])
                 ->make(true);
         }
@@ -72,7 +72,7 @@ class PesertaController extends Controller
         $module_title = $this->module_title;
 
         $lomba = Lomba::orderBy('id','asc')->get();
-        return view('pages.admin.peserta.create', compact('module_name','module_title','lomba'));   
+        return view('pages.admin.peserta.create', compact('module_name','module_title','lomba'));
     }
 
     /**
@@ -85,13 +85,13 @@ class PesertaController extends Controller
             'email.required' => 'Email Wajib diisi',
             'nama.required' => 'Nama Wajib diisi',
             'no_wa.required' => 'No Whatsapp Wajib diisi',
-            'asal_sekolah' => 'Asal Sekolah Wajib diisi',            
+            'asal_sekolah' => 'Asal Sekolah Wajib diisi',
             'url.required' => 'Alamat URL Wajib diisi',
             'url.url' => 'Wajib halaman masukkan format url',
             'file_ktp_suket.required' => 'Wajib  Diisi',
             'file_ktp_suket.mimes' => 'File harus format jpg,jpeg,png',
             'file_ktp_suket.max' => 'Maksimal ukuran file harus 5MB',
-            'setuju_syarat_ketentuan.required' => 'Syarat dan ketentuan harus diisi',            
+            'setuju_syarat_ketentuan.required' => 'Syarat dan ketentuan harus diisi',
 
         ];
 
@@ -104,11 +104,11 @@ class PesertaController extends Controller
             'asal_sekolah'   => 'required',
             'file_ktp_suket' => 'required|max:5120|mimes:png,jpg,jpeg',
             'url'   => 'required|url',
-            'setuju_syarat_ketentuan'   => 'required',            
-        ], $pesan);        
+            'setuju_syarat_ketentuan'   => 'required',
+        ], $pesan);
 
         try {
-            $no_peserta = time().'PSERTA'.$request->no_wa.rand(4,9999);        
+            $no_peserta = time().'PSERTA'.$request->no_wa.rand(4,9999);
 
             $file = $request->file('file_ktp_suket');
             $fileName = $request->no_wa.'.'. $file->getClientOriginalExtension();
@@ -119,9 +119,9 @@ class PesertaController extends Controller
             }else{
                 $request->setuju_syarat_ketentuan == 'setuju';
             }
-            
+
             //create post
-            $peserta = Peserta::create([            
+            $peserta = Peserta::create([
                 'email'         => $request->email,
                 'lomba'         => $request->lomba,
                 'no_peserta'    => $no_peserta,
@@ -136,9 +136,9 @@ class PesertaController extends Controller
             ]);
 
             if($peserta){
-                //redirect to index                
-                Alert::success('Success', 'Peserta berhasil didaftarkan');        
-                return redirect()->route('peserta.index');                
+                //redirect to index
+                Alert::success('Success', 'Peserta berhasil didaftarkan');
+                return redirect()->route('peserta.index');
             }else {
                 return redirect()->back();
             }
@@ -147,7 +147,7 @@ class PesertaController extends Controller
             $message = $e->getMessage();
             Alert::warning('Failed with error', $message);
             return redirect()->back();
-        }         
+        }
     }
 
     /**
@@ -171,7 +171,7 @@ class PesertaController extends Controller
 
         $peserta = Peserta::find($id);
 
-        return view('pages.admin.peserta.edit', compact('module_name','module_title','lomba','peserta'));   
+        return view('pages.admin.peserta.edit', compact('module_name','module_title','lomba','peserta'));
     }
 
     /**
@@ -184,13 +184,13 @@ class PesertaController extends Controller
             'email.required' => 'Email Wajib diisi',
             'nama.required' => 'Nama Wajib diisi',
             'no_wa.required' => 'No Whatsapp Wajib diisi',
-            'asal_sekolah' => 'Asal Sekolah Wajib diisi',            
+            'asal_sekolah' => 'Asal Sekolah Wajib diisi',
             'url.required' => 'Alamat URL Wajib diisi',
             'url.url' => 'Wajib halaman masukkan format url',
             'file_ktp_suket.required' => 'Wajib  Diisi',
             'file_ktp_suket.mimes' => 'File harus format jpg,jpeg,png',
             'file_ktp_suket.max' => 'Maksimal ukuran file harus 5MB',
-            'setuju_syarat_ketentuan.required' => 'Syarat dan ketentuan harus diisi',            
+            'setuju_syarat_ketentuan.required' => 'Syarat dan ketentuan harus diisi',
 
         ];
 
@@ -201,33 +201,13 @@ class PesertaController extends Controller
             'nama'     => 'required',
             'no_wa'   => 'required',
             'asal_sekolah'   => 'required',
-            'file_ktp_suket' => 'required|max:5120',
-            'url'   => 'required|url',            
-        ], $pesan);        
+            'file_ktp_suket' => 'required|max:5120|mimes:jpeg,jpg,png',
+            'url'   => 'required|url',
+        ], $pesan);
 
         try {
             if($request->file('file_ktp_suket') == "") {
-                //edit 
-                $peserta = Peserta::where('id', $id)->update([            
-                    'email'         => $request->email,
-                    'lomba'         => $request->lomba,
-                    'no_peserta'    => $no_peserta,
-                    'slug'          => Str::slug($request->nama),
-                    'nama'          => $request->nama,
-                    'no_wa'         => $request->no_wa,
-                    'asal_sekolah'  => $request->asal_sekolah,
-                    'url'           => $request->url,
-                    'keterangan' => $request->keterangan,                                
-                ]);
-            
-            }else {
-                $no_peserta = time().'PSERTA'.$request->no_wa.rand(4,9999);        
-
-                $file = $request->file('file_ktp_suket');
-                $fileName = $request->no_wa.'.'. $file->getClientOriginalExtension();
-                $file->storeAs('public/filektpsuket', $fileName);            
-                
-                //edit 
+                //edit
                 $peserta = Peserta::where('id', $id)->update([
                     'email'         => $request->email,
                     'lomba'         => $request->lomba,
@@ -237,17 +217,39 @@ class PesertaController extends Controller
                     'no_wa'         => $request->no_wa,
                     'asal_sekolah'  => $request->asal_sekolah,
                     'url'           => $request->url,
-                    'keterangan' => $request->keterangan,                
+                    'keterangan' => $request->keterangan,
+                ]);
+
+            }else {
+                $no_peserta = time().'PSERTA'.$request->no_wa.rand(4,9999);
+
+                $file = $request->file('file_ktp_suket');
+                $fileName = $request->no_wa.'.'. $file->getClientOriginalExtension();
+                $file->storeAs('public/filektpsuket', $fileName);
+
+                //edit
+                $peserta = Peserta::where('id', $id)->update([
+                    'email'         => $request->email,
+                    'lomba'         => $request->lomba,
+                    'no_peserta'    => $no_peserta,
+                    'slug'          => Str::slug($request->nama),
+                    'nama'          => $request->nama,
+                    'no_wa'         => $request->no_wa,
+                    'asal_sekolah'  => $request->asal_sekolah,
+                    'url'           => $request->url,
+                    'keterangan' => $request->keterangan,
                     'file_ktp_suket' => $fileName,
                 ]);
-                
-            }      
-            
+
+            }
+
             if($peserta){
-                //redirect to index                
-                Alert::success('Success', 'Peserta berhasil diupdate');        
-                return redirect()->route('peserta.index');                
+                //redirect to index
+                Alert::success('Success', 'Peserta berhasil diupdate');
+                return redirect()->route('peserta.index');
             }else {
+                $message = $e->getMessage();
+                Alert::warning('Failed with error', $message);
                 return redirect()->back();
             }
 
@@ -255,14 +257,14 @@ class PesertaController extends Controller
             $message = $e->getMessage();
             Alert::warning('Failed with error', $message);
             return redirect()->back();
-        }         
+        }
     }
 
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(Request $request)
-    {        		
+    {
         $id = $request->id;
 		$peserta = Peserta::find($id);
 		if (Storage::delete('public/filektpsuket/' . $peserta->file_ktp_suket)) {
@@ -273,9 +275,9 @@ class PesertaController extends Controller
             'status'  => 200,
             'success' => true,
             'message' => 'Data Berhasil Dihapus!',
-            'data'    => $peserta 
+            'data'    => $peserta
         ]);
-		        
+
     }
 
     public function export_excel()
