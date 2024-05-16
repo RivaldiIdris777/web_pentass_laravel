@@ -141,7 +141,7 @@
                             placeholder="Masukkan Tanggal perlombaan .....">
                         <div class="alert alert-danger mt-2 d-none" role="alert" id="alert-tanggal_perlombaan-edit">
                         </div>
-                    </div>                
+                    </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
@@ -210,7 +210,7 @@
 
     $("#add-lomba-form").submit(function(e) {
         e.preventDefault();
-        const fd = new FormData(this);        
+        const fd = new FormData(this);
         $.ajax({
           url: '{{ route('lomba.store') }}',
           method: 'post',
@@ -225,7 +225,7 @@
                 'Added!',
                 'Lomba Added Successfully!',
                 'success'
-              )   
+              )
 
                 $("#add-lomba-form")[0].reset();
 
@@ -234,12 +234,12 @@
                 // Reload Datatable
                 $('#yajra-lombadatatable').DataTable().ajax.reload();
             }else {
-                Swal.fire({                        
+                Swal.fire({
                     icon: 'warning',
                     title: `${response.message}`,
                     showConfirmButton: false,
                     timer: 3000
-                });                
+                });
             }
           }
         });
@@ -247,9 +247,9 @@
 
     $('body').on('click', '#btn-edit-lomba', function () {
 
-        $("#img-edit-view").remove();        
+        $("#img-edit-view").remove();
 
-        $("#nama_lomba_gambar").remove();        
+        $("#nama_lomba_gambar").remove();
 
         let lomba_id = $(this).data('id');
 
@@ -258,14 +258,14 @@
             url: `/lomba/${lomba_id}`,
             type: "GET",
             cache: false,
-            success: function (response) {                
-                
+            success: function (response) {
+
                 //fill data to form
                 src = $(this).find('gambar').attr('src');
                 $('.image-view').append(`
                 <img src="/storage/lomba/${response.data.gambar}" class="img-fluid" id="img-edit-view">
-                <p class="mt-3" id="nama_lomba_gambar"><strong>Nama Gambar: ${response.data.gambar}</strong></p>            
-                `);            
+                <p class="mt-3" id="nama_lomba_gambar"><strong>Nama Gambar: ${response.data.gambar}</strong></p>
+                `);
                 $('#nama_lomba').val(response.data.nama_lomba);
                 $('#keterangan').val(response.data.keterangan);
                 $('#tanggal_pendaftaran').val(response.data.tanggal_pendaftaran);
@@ -311,16 +311,16 @@
                     $("#edit-lomba-form")[0].reset();
 
                     // Reload Datatable
-                    $('#yajra-lombadatatable').DataTable().ajax.reload();                
-                }                                
+                    $('#yajra-lombadatatable').DataTable().ajax.reload();
+                }
             }
         });
-    });    
-      
+    });
+
     //button delete
     $('body').on('click', '#deleteLomba', function () {
 
-    let id = $(this).data('id');    
+    let id = $(this).data('id');
     let csrf = '{{ csrf_token() }}';
     Swal.fire({
         title: 'Apakah Kamu Yakin?',
@@ -330,7 +330,7 @@
         cancelButtonText: 'TIDAK',
         confirmButtonText: 'YA, HAPUS!'
     }).then((result) => {
-        if (result.isConfirmed) {            
+        if (result.isConfirmed) {
             //fetch to delete data
             $.ajax({
               url: '{{ route('lomba.destroy') }}',
@@ -339,23 +339,23 @@
                 id: id,
                 _token: csrf
               },
-                success:function(response){ 
+                success:function(response){
 
                     //show success message
-                    Swal.fire({                        
+                    Swal.fire({
                         icon: 'success',
                         title: `${response.message}`,
                         showConfirmButton: false,
                         timer: 3000
-                    });                
+                    });
 
                 // Reload Datatable
                 $('#yajra-lombadatatable').DataTable().ajax.reload();
-                    
+
                 }
             });
 
-            
+
         }
     })
 

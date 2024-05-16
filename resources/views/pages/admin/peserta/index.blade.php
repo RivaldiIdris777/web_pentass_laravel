@@ -55,7 +55,7 @@
                     data: 'file_ktp_suket',
                     name: 'file_ktp_suket',
                     "render": function (file_ktp_suket) {
-                        return `<img src="{{ Storage::url('public/filektpsuket/${file_ktp_suket}') }}" alt="${file_ktp_suket}" width="40" height="40">`;
+                        return `<a href="{{ Storage::url('public/filektpsuket/${file_ktp_suket}') }}" alt="${file_ktp_suket}" >Download</a>`;
                     }
                 },
                 {
