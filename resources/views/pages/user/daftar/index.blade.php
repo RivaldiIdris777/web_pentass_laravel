@@ -2,12 +2,12 @@
 <!-- ======= Hero Section ======= -->
 <main id="main">
     
-    <section id="cta" class="cta"  style="background-color:yellow;">
+    <section id="cta" class="cta"  style="background-color:#3ae374;">
         <div class="container pt-5" data-aos="fade-in">
 
             <div class="text-center pt-5">                
-            <h2 style="color:#800000;">Pendaftaran Lomba</h2>
-                    <h5 style="color:#800000;">Terdapat tata cara dalam pendaftaran. Silahkan Klik Tombol Dibawah.</h5>
+            <h2 style="color:#ffffff;">Pendaftaran Lomba</h2>
+                    <h5 style="color:#ffffff;">Terdapat tata cara dalam pendaftaran. Silahkan Klik Tombol Dibawah.</h5>
                     <br>
                     <a href="{{ route('pendaftaran.panduan') }}" class="btn btn-danger mb-5">Syarat/Ketentuan & Tata
                         Cara Pendaftaran</a>
@@ -98,7 +98,7 @@
                             @enderror
                         </div>
                         <div class="col-md-12">
-                            <label for="url" class="form-label">Link Google Drive Materi Lomba</label>
+                            <label for="url" class="form-label">Link Google Drive Materi Lomba (Pastikan Akses URL Tidak Dikunci)</label>
                             <input type="text" name="url" class="form-control @error('url') is-invalid @enderror"
                                 value="{{ old('url') }}"
                                 placeholder="Masukkan Alamat Url Google Drive yang sudah dibuat...">

@@ -6,11 +6,10 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <title>Pentass | Universitas Muhammadiyah Jambi</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
-
-    <link href="{{ asset('templates/assets/img/favicon.ico')}}" rel="icon">
-    <link href="{{ asset('templates/assets/img/logo_um.png')}}" rel="apple-touch-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="icon" type="image/png" href="{{asset('templates/assets/img/favicon.ico')}}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{asset('templates/assets/img/logo_um.png')}}">
 
     <!-- Google Fonts -->
     <link

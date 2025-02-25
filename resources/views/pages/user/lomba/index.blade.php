@@ -43,10 +43,10 @@
     <section id="services mt-5" class="services">
         <div class="container">
 
-            <div class="row ">
+            <div class="row justify-content-center">
 
                 @foreach($lomba as $dt)
-                <div class="col-md-4 mb-4 d-flex" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="card" style="background-color:#800000">
                         <div class="card-body text-center">
                             <img src="{{ Storage::url('public/lomba/').$dt->gambar }}" alt="" style="width:20%;">

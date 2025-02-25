@@ -17,7 +17,7 @@
         <div class="container">
             <div class="card">
                 <div class="card-header text-center" style="background-color:#800000;">
-                    <h4 style="color:#fff;">Cari Data Peserta di PENTASS Tahun 2024</h4>
+                    <h4 style="color:#fff;">Cari Data Peserta di PENTASS 2 Tahun 2025</h4>
                 </div>
                 <div class="card-body d-flex justify-content-center">
                     <form action="{{ route('pendaftaran.caripendaftar') }}" method="post" class="row g-3">

@@ -67,12 +67,11 @@
                     bagian dari keberagaman budaya dan nilai-nilai keislaman, memandang penting untuk terus mendukung
                     dan menginspirasi siswa SMA Se-derajat dalam mengembangkan potensi diri mereka.
                     Pendidikan bukan hanya tentang penguasaan ilmu pengetahuan, tetapi juga melibatkan aspek spiritual
-                    dan seni. Oleh karena itu, kami dengan bangga mengumumkan penyelenggaraan Lomba Tilawatil Qur'an,
-                    Sains, dan Seni. Lomba ini kami sebut dengan PENTASS (Pekan Tilawatil Qur’an, Sains dan Seni).
+                    dan seni. Oleh karena itu, kami dengan bangga mengumumkan penyelenggaraan Lomba Seni. 
+                    Lomba ini kami sebut dengan PENTASS (Seni).
                     PENTASS bukan hanya sebagai ajang kompetisi, namun juga sebagai sarana positif untuk memupuk
                     semangat, bakat, dan kreativitas siswa dalam tiga dimensi penting kehidupan agama, sains, dan seni.
-                    Melalui PENTASS, kami berharap dapat menciptakan platform yang memotivasi siswa untuk meningkatkan
-                    kualitas bacaan Al-Qur'an, merangsang minat di bidang sains, dan memberikan ruang ekspresi kreatif
+                    Melalui PENTASS, kami berharap dapat menciptakan platform yang memotivasi siswa untuk memberikan ruang ekspresi kreatif
                     dalam seni. Dengan mengadopsi format online, PENTASS ini diharapkan dapat mencakup partisipasi luas
                     dari seluruh SMA Se-derajat di Provinsi Jambi, membangun solidaritas, dan merayakan keberagaman
                     prestasi siswa.
@@ -96,7 +95,7 @@
                 <h2>KATEGORI LOMBA</h2>
             </div>
 
-            <div class="row">
+            <div class="row justify-content-center">
                 @foreach($lomba as $dt)
                 <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <a href="#" data-bs-toggle="modal" data-bs-target="#syaratpendaftaran">
@@ -118,7 +117,7 @@
     <section id="cta" class="cta mb-3">
         <div class="container" data-aos="fade-in">
             <div class="text-center">
-                <h3>HADIAH LOMBA - TILAWATIL QUR'AN (Perorangan) !!</h3>
+                <h3>HADIAH LOMBA - Lomba Video Kreatif (Tim/Perorangan) !!</h3>
             </div>
         </div>
     </section><!-- End Cta Section -->
@@ -128,243 +127,49 @@
             <div class="card-body text-center text-light" style="background-color:#800000;">
                 <img src="{{ asset('templates/assets/img/juara1.png') }}" alt="" class="img-fluid" style="width:20%;">
                 <h4>Juara 1</h4>
-                <p>Hadiah Rp. 2000.000</p>
+                <p>Hadiah Sertifikat + Uang Pembinaan</p>
             </div>
         </div>
         <div class="card" style="background-color:#800000;">
             <div class="card-body text-center text-light" style="background-color:#800000;">
                 <img src="{{ asset('templates/assets/img/juara2.png') }}" alt="" class="img-fluid" style="width:20%;">
                 <h4>Juara 2</h4>
-                <p>Hadiah Rp. 1000.000</p>
+                <p>Hadiah Sertifikat + Uang Pembinaan</p>
             </div>
         </div>
         <div class="card" style="background-color:#800000;">
             <div class="card-body text-center text-light" style="background-color:#800000;">
                 <img src="{{ asset('templates/assets/img/juara3.png') }}" alt="" class="img-fluid" style="width:20%;">
                 <h4>Juara 3</h4>
-                <p>Hadiah Rp. 500.000</p>
+                <p>Hadiah Sertifikat + Uang Pembinaan</p>
             </div>
         </div>
-    </div>
+    </div>        
 
-    <section id="cta" class="cta mb-3">
-        <div class="container" data-aos="fade-in">
-            <div class="text-center">
-                <h3>HADIAH LOMBA - KARYA TULIS ILMIAH (Perorangan) !!</h3>
-            </div>
-        </div>
-    </section><!-- End Cta Section -->
-
-    <div class="card-group p-3">
-        <div class="card" style="background-color:#800000;">
-            <div class="card-body text-center text-light" style="background-color:#800000;">
-                <img src="{{ asset('templates/assets/img/juara1.png') }}" alt="" class="img-fluid" style="width:20%;">
-                <h4>Juara 1</h4>
-                <p>Hadiah Rp. 2.000.000</p>
-            </div>
-        </div>
-        <div class="card" style="background-color:#800000;">
-            <div class="card-body text-center text-light" style="background-color:#800000;">
-                <img src="{{ asset('templates/assets/img/juara2.png') }}" alt="" class="img-fluid" style="width:20%;">
-                <h4>Juara 2</h4>
-                <p>Hadiah Rp. 1.000.000</p>
-            </div>
-        </div>
-        <div class="card" style="background-color:#800000;">
-            <div class="card-body text-center text-light" style="background-color:#800000;">
-                <img src="{{ asset('templates/assets/img/juara3.png') }}" alt="" class="img-fluid" style="width:20%;">
-                <h4>Juara 3</h4>
-                <p>Hadiah Rp. 500.000</p>
-            </div>
-        </div>
-    </div>
-
-    <section id="cta" class="cta mb-3">
-        <div class="container" data-aos="fade-in">
-            <div class="text-center">
-                <h3>HADIAH LOMBA - CERPEN (Perorangan) !!</h3>
-            </div>
-        </div>
-    </section><!-- End Cta Section -->
-
-    <div class="card-group p-3">
-        <div class="card" style="background-color:#800000;">
-            <div class="card-body text-center text-light" style="background-color:#800000;">
-                <img src="{{ asset('templates/assets/img/juara1.png') }}" alt="" class="img-fluid" style="width:20%;">
-                <h4>Juara 1</h4>
-                <p>Hadiah Rp. 2.000.000</p>
-            </div>
-        </div>
-        <div class="card" style="background-color:#800000;">
-            <div class="card-body text-center text-light" style="background-color:#800000;">
-                <img src="{{ asset('templates/assets/img/juara2.png') }}" alt="" class="img-fluid" style="width:20%;">
-                <h4>Juara 2</h4>
-                <p>Hadiah Rp. 1.000.000</p>
-            </div>
-        </div>
-        <div class="card" style="background-color:#800000;">
-            <div class="card-body text-center text-light" style="background-color:#800000;">
-                <img src="{{ asset('templates/assets/img/juara3.png') }}" alt="" class="img-fluid" style="width:20%;">
-                <h4>Juara 3</h4>
-                <p>Hadiah Rp. 500.000</p>
-            </div>
-        </div>
-    </div>
-
-    <section id="cta" class="cta mb-3">
-        <div class="container" data-aos="fade-in">
-            <div class="text-center">
-                <h3>HADIAH LOMBA - BACA PUISI (Perorangan) !!</h3>
-            </div>
-        </div>
-    </section><!-- End Cta Section -->
-
-    <div class="card-group p-3">
-        <div class="card" style="background-color:#800000;">
-            <div class="card-body text-center text-light" style="background-color:#800000;">
-                <img src="{{ asset('templates/assets/img/juara1.png') }}" alt="" class="img-fluid" style="width:20%;">
-                <h4>Juara 1</h4>
-                <p>Hadiah Rp. 2.000.000</p>
-            </div>
-        </div>
-        <div class="card" style="background-color:#800000;">
-            <div class="card-body text-center text-light" style="background-color:#800000;">
-                <img src="{{ asset('templates/assets/img/juara2.png') }}" alt="" class="img-fluid" style="width:20%;">
-                <h4>Juara 2</h4>
-                <p>Hadiah Rp. 1.000.000</p>
-            </div>
-        </div>
-        <div class="card" style="background-color:#800000;">
-            <div class="card-body text-center text-light" style="background-color:#800000;">
-                <img src="{{ asset('templates/assets/img/juara3.png') }}" alt="" class="img-fluid" style="width:20%;">
-                <h4>Juara 3</h4>
-                <p>Hadiah Rp. 500.000</p>
-            </div>
-        </div>
-    </div>
-
-    <section id="cta" class="cta mb-3">
-        <div class="container" data-aos="fade-in">
-            <div class="text-center">
-                <h3>HADIAH LOMBA - POSTER (Perorangan) !!</h3>
-            </div>
-        </div>
-    </section><!-- End Cta Section -->
-
-    <div class="card-group p-3">
-        <div class="card" style="background-color:#800000;">
-            <div class="card-body text-center text-light" style="background-color:#800000;">
-                <img src="{{ asset('templates/assets/img/juara1.png') }}" alt="" class="img-fluid" style="width:20%;">
-                <h4>Juara 1</h4>
-                <p>Hadiah Rp. 2.000.000</p>
-            </div>
-        </div>
-        <div class="card" style="background-color:#800000;">
-            <div class="card-body text-center text-light" style="background-color:#800000;">
-                <img src="{{ asset('templates/assets/img/juara2.png') }}" alt="" class="img-fluid" style="width:20%;">
-                <h4>Juara 2</h4>
-                <p>Hadiah Rp. 1.000.000</p>
-            </div>
-        </div>
-        <div class="card" style="background-color:#800000;">
-            <div class="card-body text-center text-light" style="background-color:#800000;">
-                <img src="{{ asset('templates/assets/img/juara3.png') }}" alt="" class="img-fluid" style="width:20%;">
-                <h4>Juara 3</h4>
-                <p>Hadiah Rp. 500.000</p>
-            </div>
-        </div>
-    </div>
-
-    <section id="cta" class="cta mb-3">
-        <div class="container" data-aos="fade-in">
-            <div class="text-center">
-                <h3>HADIAH LOMBA - SHORT MOVIE (Tim) !!</h3>
-            </div>
-        </div>
-    </section><!-- End Cta Section -->
-
-    <div class="card-group p-3">
-        <div class="card" style="background-color:#800000;">
-            <div class="card-body text-center text-light" style="background-color:#800000;">
-                <img src="{{ asset('templates/assets/img/juara1.png') }}" alt="" class="img-fluid" style="width:20%;">
-                <h4>Juara 1</h4>
-                <p>Hadiah Rp. 3.000.000</p>
-            </div>
-        </div>
-        <div class="card" style="background-color:#800000;">
-            <div class="card-body text-center text-light" style="background-color:#800000;">
-                <img src="{{ asset('templates/assets/img/juara2.png') }}" alt="" class="img-fluid" style="width:20%;">
-                <h4>Juara 2</h4>
-                <p>Hadiah Rp. 1.500.000</p>
-            </div>
-        </div>
-        <div class="card" style="background-color:#800000;">
-            <div class="card-body text-center text-light" style="background-color:#800000;">
-                <img src="{{ asset('templates/assets/img/juara3.png') }}" alt="" class="img-fluid" style="width:20%;">
-                <h4>Juara 3</h4>
-                <p>Hadiah Rp. 750.000</p>
-            </div>
-        </div>
-    </div>
-
-    <section id="cta" class="cta mb-3">
-        <div class="container" data-aos="fade-in">
-            <div class="text-center">
-                <h3>HADIAH LOMBA - PADUAN SUARA (Tim) !!</h3>
-            </div>
-        </div>
-    </section><!-- End Cta Section -->
-
-    <div class="card-group p-3">
-        <div class="card" style="background-color:#800000;">
-            <div class="card-body text-center text-light" style="background-color:#800000;">
-                <img src="{{ asset('templates/assets/img/juara1.png') }}" alt="" class="img-fluid" style="width:20%;">
-                <h4>Juara 1</h4>
-                <p>Hadiah Rp. 3.000.000</p>
-            </div>
-        </div>
-        <div class="card" style="background-color:#800000;">
-            <div class="card-body text-center text-light" style="background-color:#800000;">
-                <img src="{{ asset('templates/assets/img/juara2.png') }}" alt="" class="img-fluid" style="width:20%;">
-                <h4>Juara 2</h4>
-                <p>Hadiah Rp. 1.500.000</p>
-            </div>
-        </div>
-        <div class="card" style="background-color:#800000;">
-            <div class="card-body text-center text-light" style="background-color:#800000;">
-                <img src="{{ asset('templates/assets/img/juara3.png') }}" alt="" class="img-fluid" style="width:20%;">
-                <h4>Juara 3</h4>
-                <p>Hadiah Rp. 750.000</p>
-            </div>
-        </div>
-    </div>
-
-    <section id="cta" class="cta mb-3">
-        <div class="container" data-aos="fade-in">
+    <!-- <section id="cta" class="cta mb-3">
+        <div class="container" data-aos="fade-in">            
+            <div class="row pt-5 justify-content-center">
             <div class="text-center">
                 <h3>Beasiswa Kuliah UM Jambi</h3><br>
             </div>
-            <div class="row pt-5">
                 <div class="col-md-6">
-
-                    <h6 class="text-light">Lomba Perorangan</h6><br>
-                    <p>Juara 1 : Bebas biaya Pendaftaran Bebas uang pembangunan</p>
-                    <p>Juara 2 : Bebas biaya Pendaftaran Bebas uang pembangunan 4 semester</p>
-                    <p>Juara 3 : Bebas biaya Pendaftaran Bebas uang pembangunan 2 semester</p>
+                    <h6 class="text-light">Juara 1-3 Favorit</h6><br>
+                    <p>Juara 1 : Sertifikat + Uang Pembinaan</p>
+                    <p>Juara 2 : Sertifikat + Uang Pembinaan</p>
+                    <p>Juara 3 : Sertifikat + Uang Pembinaan</p>
                 </div>
                 <div class="col-md-6">
-
-                    <h6 class="text-light">Lomba Group</h6><br>
-                    <p>Juara 1 : Bebas biaya Pendaftaran Bebas uang pembangunan</p>
-                    <p>Juara 2 : Bebas biaya Pendaftaran Bebas uang pembangunan 4 semester</p>
-                    <p>Juara 3 : Bebas biaya Pendaftaran Bebas uang pembangunan 2 semester</p>
-                </div>
-                <div class="col-md-12 mt-5">
-                    <h5 class="text-light">Bingkisan: Marchendise Universitas Muhammadiyah Jambi, Sertifikat, Piala</h5>
-                </div>
+                    <h6 class="text-light">Juara 1-3 Favorit</h6><br>
+                    <p>Juara 1 : Sertifikat + Uang Pembinaan</p>
+                    <p>Juara 2 : Sertifikat + Uang Pembinaan</p>
+                    <p>Juara 3 : Sertifikat + Uang Pembinaan</p>
+                </div>                
+            </div>
+            <div class="col-md-12 mt-5">
+                <h5 class="text-light">Bingkisan: Marchendise Universitas Muhammadiyah Jambi, Sertifikat, Piala</h5>
             </div>
         </div>
-    </section><!-- End Cta Section -->
+    </section> -->
 
 </main><!-- End #main -->
 
@@ -398,7 +203,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body text-center">
-                <img src="{{ asset('templates/assets/img/poster.jpeg') }}" class="img-fluid" alt="">
+                <img src="{{ asset('templates/assets/img/poster.png') }}" class="img-fluid" alt="">
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

@@ -50,7 +50,6 @@ return array(
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
     'App\\Http\\Requests\\Auth\\LoginRequest' => $baseDir . '/app/Http/Requests/Auth/LoginRequest.php',
     'App\\Http\\Requests\\ProfileUpdateRequest' => $baseDir . '/app/Http/Requests/ProfileUpdateRequest.php',
-    'App\\Livewire\\Peserta' => $baseDir . '/app/Livewire/Peserta.php',
     'App\\Models\\Lomba' => $baseDir . '/app/Models/Lomba.php',
     'App\\Models\\Menu' => $baseDir . '/app/Models/Menu.php',
     'App\\Models\\Permission' => $baseDir . '/app/Models/Permission.php',
